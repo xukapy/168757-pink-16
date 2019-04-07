@@ -31,6 +31,7 @@
     </header>
     <main class="page-main">
       <section class="download">
+        <h2 class="visually-hidden">Загрузка приложения</h2>
         <span class="download__slogan">Взгляните на жизнь иначе!</span>
         <div class="download__picture">
           <img class="download__picture-image" src="http://placehold.it/320x394" width="320" height="394" alt="Приложение пинк">
@@ -48,7 +49,7 @@
               <a class="app-store__link app-store__link--windows" href="https://www.microsoft.com/ru-ru/store/apps">Windows</a>
             </li>
           </ul>
-          <p class="app-store__accessibility-note">Доступно для iPhone, iPad, Android</br>
+          <p class="app-store__accessibility-note">Доступно для iPhone, iPad, Android<br>
             Windows Phone, OS X, Windows 8
           </p>
         </div>
@@ -89,22 +90,19 @@
               <cite class="reviews__author-name">Николай Петров</cite>
               <p class="reviews__text">Это приложение перевернуло мой мир и позволило
               по-новому взглянуть на привычные серые вещи! А еще я познакомился со
-              своей будущей женой в комментариях к выложенной фотографии!
-             </p>
+              своей будущей женой в комментариях к выложенной фотографии!</p>
             </blockquote>
             <blockquote class="reviews__item slider__item">
               <cite class="reviews__author-name">Николай Петров</cite>
               <p class="reviews__text">Это приложение перевернуло мой мир и позволило
               по-новому взглянуть на привычные серые вещи! А еще я познакомился со
-              своей будущей женой в комментариях к выложенной фотографии!
-             </p>
+              своей будущей женой в комментариях к выложенной фотографии!</p>
             </blockquote>
             <blockquote class="reviews__item slider__item">
               <cite class="reviews__author-name">Николай Петров</cite>
               <p class="reviews__text">Это приложение перевернуло мой мир и позволило
               по-новому взглянуть на привычные серые вещи! А еще я познакомился со
-              своей будущей женой в комментариях к выложенной фотографии!
-             </p>
+              своей будущей женой в комментариях к выложенной фотографии!</p>
             </blockquote>
           </div>
           <div class="reviews__toggles slider__toggles">
@@ -117,34 +115,42 @@
       <section class="price">
         <div class="price__wrapper slider">
           <h2 class="visually-hidden">Стоимость</h2>
-          <div class="price__list slider__list">
-            <div class="price__item slider__item">
-              <div class="price__plan">
-                <h3 class="price__name">база</h3>
-                <p class="price__amount">1,99 usd</p>
-              </div>
-              <p class="price__option price__option--accepted">розовый фильтр</p>
-              <p class="price__option price__option--declined">смайлики</p>
-              <p class="price__option price__option--declined">комментарии</p>
-            </div>
-            <div class="price__item slider__item">
-              <div class="price__plan price__plan--hit">
-                <h3 class="price__name">стандарт</h3>
-                <p class="price__amount">3,99 usd</p>
-              </div>
-              <p class="price__option price__option--accepted">розовый фильтр</p>
-              <p class="price__option price__option--accepted">смайлики</p>
-              <p class="price__option price__option--declined">комментарии</p>
-            </div>
-            <div class="price__item slider__item">
-              <div class="price__plan">
-                <h3 class="price__name">анлим</h3>
-                <p class="price__amount">9,99 usd</p>
-              </div>
-              <p class="price__option price__option--accepted">розовый фильтр</p>
-              <p class="price__option price__option--accepted">смайлики</p>
-              <p class="price__option price__option--accepted">комментарии</p>
-            </div>
+          <div class="slider__list">
+            <table class="price__list slider__item--content">
+              <tr>
+                <th class="price__plan visually-hidden"></th>
+                <th class="price__plan">
+                  <b class="price__name">база</b>
+                  <p class="price__amount">1,99 usd</p>
+                </th>
+                <th class="price__plan">
+                  <b class="price__name">стандарт</b>
+                  <p class="price__amount">3,99 usd</p>
+                </th>
+                <th class="price__plan">
+                  <b class="price__name">анлим</b>
+                  <p class="price__amount">9,99 usd</p>
+                </th>
+              </tr>
+              <tr>
+                <td class="price__option price__option--nosign">розовый фильтр</td>
+                <td class="price__option price__option--accepted">розовый фильтр</td>
+                <td class="price__option price__option--accepted">розовый фильтр</td>
+                <td class="price__option price__option--accepted">розовый фильтр</td>
+              </tr>
+              <tr>
+                <td class="price__option price__option--nosign">смайлики</td>
+                <td class="price__option price__option--declined">смайлики</td>
+                <td class="price__option price__option--accepted">смайлики</td>
+                <td class="price__option price__option--accepted">смайлики</td>
+              </tr>
+              <tr>
+                <td class="price__option price__option--nosign">комментарии</td>
+                <td class="price__option price__option--declined">комментарии</td>
+                <td class="price__option price__option--declined">комментарии</td>
+                <td class="price__option price__option--accepted">комментарии</td>
+              </tr>
+            </table>
           </div>
           <div class="price__toggles slider__toggles">
             <button class="slider__toggle" type="button">1</button>
