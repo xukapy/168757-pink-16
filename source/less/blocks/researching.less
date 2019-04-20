@@ -1,0 +1,63 @@
+.researching {
+  display: none;
+  width: 620px;
+  margin: 0 auto;
+
+  /* Временно для сетки */
+  min-height: 424px;
+  border: 2px solid blue;
+}
+
+.researching__clock {
+  width: 300px;
+
+  font-size: 96px;
+  font-weight: bold;
+  line-height: 150px;
+
+  color: #d22856;
+}
+
+.researching__text {
+  width: 310px;
+}
+
+.researching__title {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.researching__link {
+
+  color: #d22856;
+  text-decoration: underline;
+}
+
+@media (min-width: @tablet-width) {
+  .researching {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .researching {
+    width: 940px;
+    /* Временно для сетки */
+    min-height: 466px;
+  }
+
+  .researching__clock {
+    font-size: 120px;
+    line-height: 187px;
+
+  }
+
+  .researching__text {
+    width: 570px;
+  }
+
+}
