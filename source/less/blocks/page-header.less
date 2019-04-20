@@ -1,10 +1,46 @@
 .page-header {
-  color: #ffffff;
-  background: #1d2631;
+  display: flex;
+  flex-direction: column;
 
-  outline: 3px dashed #cc1455;
+  width: 320px;
+  margin: 0 auto;
+
+  color: #ffffff;
+  background: @bg-menu;
+
+  /* Временно для сетки */
+  border: 3px dashed #cc1455;
 }
 
 .page-header__logo {
-  outline: 2px dashed #cc1455;
+  height: 70px;
+  /* Временно для сетки */
+  border: 1px solid orange;
+}
+
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: 660px;
+  }
+
+  .page-header__logo {
+    height: 110px;
+
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 960px;
+  }
+
+  .page-header__logo {
+    height: 110px;
+    width: 150px;
+  }
 }
