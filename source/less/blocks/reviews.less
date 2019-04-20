@@ -1,6 +1,8 @@
 .reviews {
-
-  outline: 2px dashed green;
+  width: 280px;
+  margin: 0 auto;
+  /* Временно для сетки */
+  border: 2px dashed #cc1455;
 }
 
 .reviews__author-name {
@@ -12,7 +14,34 @@
   text-align: center;
 }
 
+.reviews__author-about {
+  display: none;
+}
+
 .reviews__item {
+  display: flex;
+  flex-direction: column;
+
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    width: 620px;
+  }
+
+  .reviews__author-about {
+    display: block;
+  }
+
+  .reviews__text {
+    order: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    width: 940px;
+  }
 }
