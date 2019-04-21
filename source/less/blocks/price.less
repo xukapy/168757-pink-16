@@ -37,3 +37,40 @@
     display: none;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .price__wrapper {
+    width: 660px;
+  }
+
+  .price__list {
+    width: 620px;
+  }
+
+  .price__plan {
+    &:first-child {
+      display: block;
+    }
+  }
+
+  .price__option {
+    &--nosign {
+      display: block;
+    }
+  }
+
+  .price__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price__wrapper  {
+    .wrapper(960px, 10px);
+  }
+
+  .price__list {
+    width: 940px;
+    min-height: 280px;
+  }
+}
