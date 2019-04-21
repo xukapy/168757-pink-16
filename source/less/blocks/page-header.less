@@ -1,14 +1,17 @@
 .page-header {
+
+  color: #ffffff;
+  background: @bg-menu;
+}
+
+.page-header__wrapper {
   display: flex;
   flex-direction: column;
 
   .wrapper();
 
-  color: #ffffff;
-  background: @bg-menu;
-
   /* Временно для сетки */
-  border: 3px dashed #cc1455;
+  outline: 2px dashed #cc1455;
 }
 
 .page-header__logo {
@@ -19,7 +22,7 @@
 
 
 @media (min-width: @tablet-width) {
-  .page-header {
+  .page-header__wrapper {
     width: 660px;
   }
 
@@ -31,7 +34,7 @@
 
 
 @media (min-width: @desktop-width) {
-  .page-header {
+  .page-header__wrapper {
     flex-direction: row;
     justify-content: space-between;
 

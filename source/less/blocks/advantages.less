@@ -1,19 +1,24 @@
 .advantages {
-  .wrapper();
-  /* Временно для сетки */
-  outline: 2px dashed #cc1455;
+  background: @bg-grey;
 }
-
-
 
 .advantages__slogan {
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
-  background: #ffffff;
 
+  background: #ffffff;
+}
+
+.advantages__slogan-wrapper {
+  .wrapper();
   /* Временно для сетки */
   min-height: 250px;
+  outline: 2px dashed #cc1455;
+}
+
+.advantages__wrapper {
+  .wrapper();
 }
 
 .advantages__list {
@@ -37,16 +42,17 @@
 
 
 @media (min-width: @tablet-width) {
-  .advantages {
+  .advantages__slogan-wrapper {
     width: 660px;
   }
 
   .advantages__wrapper {
     display: flex;
+
+    width: 660px;
   }
 
   .advantages__list {
-
     width: 310px;
     margin-left: 0;
   }
@@ -63,7 +69,11 @@
 }
 
 @media (min-width: @desktop-width) {
-  .advantages {
+  .advantages__slogan-wrapper {
+    .wrapper(960px, 10px);
+  }
+
+  .advantages__wrapper {
     .wrapper(960px, 10px);
   }
 
