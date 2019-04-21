@@ -1,9 +1,9 @@
 .app-store {
   color: #ffffff;
-}
 
-.app-store a {
-  color: inherit;
+  a {
+    color: inherit;
+  }
 }
 
 .app-store__button {
@@ -13,7 +13,11 @@
 }
 
 .app-store__list {
-  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  .list-reset();
+
 }
 
 

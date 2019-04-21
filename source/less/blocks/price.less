@@ -1,5 +1,11 @@
 .price {
-  outline: 2px dashed yellow;
+}
+
+.price__wrapper {
+  .wrapper();
+  overflow: hidden;
+  /* Временно для сетки */
+  outline: 2px dashed orange;
 }
 
 .price__plan {
@@ -7,6 +13,10 @@
   color: #ffffff;
   line-height: 30px;
   text-transform: uppercase;
+
+  &:first-child {
+    display: none;
+  }
 }
 
 .price__name {
@@ -22,4 +32,8 @@
 .price__option {
   line-height: 30px;
   text-transform: uppercase;
+
+  &--nosign {
+    display: none;
+  }
 }
