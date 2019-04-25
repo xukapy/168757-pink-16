@@ -1,3 +1,40 @@
-.page-main {
-  outline: 3px dashed blue;
+.page-main__welcome {
+  font-size: 24px;
+  font-weight: 300;
+  color: #ffffff;
+  background: @bg-menu;
+}
+
+.page-main__welcome-wrapper {
+  .wrapper();
+
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Временно для сетки */
+  outline: 2px dashed green;
+  min-height: 170px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .page-main__welcome-wrapper {
+    width: 660px;
+
+    /* Временно для сетки */
+    min-height: 330px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__welcome-wrapper {
+    .wrapper(960px, 10px);
+
+    /* Временно для сетки */
+    min-height: 286px;
+  }
 }

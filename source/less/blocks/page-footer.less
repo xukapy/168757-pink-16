@@ -1,4 +1,37 @@
 .page-footer {
+  &--hidden {
+    display: none;
+  }
+}
+
+.page-footer__wrapper {
+  .wrapper();
+
+  /* Временно для сетки */
+  min-height: 284px;
 
   outline: 3px dashed #cc1455;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: block;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    width: 660px;
+    /* Временно для сетки */
+    min-height: 126px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    .wrapper(960px, 10px);
+    /* Временно для сетки */
+    min-height: 198px;
+  }
 }

@@ -2,5 +2,23 @@
   color: #ffffff;
   background: #283645;
 
-  outline: 3px dashed yellow;
+  /* Временно для сетки */
+  min-height: 256px;
+  border: 1px solid yellow;
+}
+
+.main-nav__list {
+  /* Временно для сетки */
+  border: 1px solid blue;
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    min-height: 110px;
+    width: 644px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
 }

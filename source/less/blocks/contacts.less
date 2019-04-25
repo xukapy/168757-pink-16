@@ -1,4 +1,7 @@
 .contacts {
+  .wrapper();
+
+  /* Временно для сетки */
   outline: 2px dashed blue;
   background: #ffffff;
 }
@@ -7,17 +10,15 @@
   font-size: 24px;
   font-weight: 300;
   text-align: center;
-}
 
-.contacts__intro p {
-  margin: 0;
-  padding: 0;
+  p {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .contacts__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  .list-reset();
 }
 
 .contacts__type {
@@ -32,6 +33,45 @@
 }
 
 .contacts__map {
+  margin-left: -20px;
+  margin-right: -20px;
+
   color: #ffffff;
   background: url("../img/bg-map-mobile@1x.png") no-repeat center;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    width: 660px;
+  }
+
+  .contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .contacts__map {
+    background: url("../img/bg-map-tablet@1x.jpg") no-repeat center;
+
+    min-height: 374px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    .wrapper(960px, 10px);
+  }
+
+  .contacts__item {
+    &:nth-child(2) {
+      order: 1;
+    }
+  }
+
+  .contacts__map {
+    background: url("../img/bg-map-desktop@1x.jpg") no-repeat center;
+
+    min-height: 500px;
+  }
 }

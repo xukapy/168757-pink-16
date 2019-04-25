@@ -1,48 +1,48 @@
 .photos {
-  outline: 2px dashed red;
-}
+  .wrapper();
 
-.photos__header {
-  font-size: 24px;
-  font-weight: 300;
-  color: #ffffff;
-  background: #1d2631 url("../img/bg-back-mobile@1x.jpg") no-repeat;
-}
-
-.photos__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.photo__post {
-  margin: 0;
-  padding: 0;
-  background: #f2f2f2;
-}
-
-.photo__author-name {
-  font-weight: bold;
-  font-style: normal;
-  line-height: 24px;
-  color: inherit;
-}
-
-.photo__time {
-  font-size: 12px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-
-.photo__like {
-  font-size: 12px;
-  color: #d22856;
-  line-height: 24px;
-  text-transform: uppercase;
+  /* Временно для сетки */
+  outline: 2px dashed orange;
 }
 
 .photos__slogan {
-  margin: 0;
-  padding: 0;
   text-align: center;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Временно для сетки */
+  min-height: 184px;
+}
+
+.photos__list {
+  .list-reset();
+}
+
+@media (min-width: @tablet-width) {
+  .photos {
+    width: 660px;
+  }
+
+  .photos__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .photos__item {
+    width: 300px;
+
+    &:first-child {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photos {
+    .wrapper(960px, 10px);
+  }
 }
