@@ -7,13 +7,15 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header main-nav--opened" >
       <div class="page-header__wrapper">
         <a class="page-header__logo">
           <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
         </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <nav class="main-nav main-nav--nojs">
+          <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+          </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
               <a>Главная</a>
@@ -35,24 +37,24 @@
       <section class="download">
         <div class="download__wrapper">
           <h2 class="visually-hidden">Загрузка приложения</h2>
-          <!--div class="download__picture">
+          <div class="download__picture visually-hidden">
             <img class="download__picture-image" src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Приложение пинк">
-          </div-->
+          </div>
           <div class="download__shop app-store">
             <span class="download__slogan">Взгляните на жизнь иначе!</span>
             <a class="app-store__button" href="https://www.apple.com/lae/ios/app-store/">Скачать приложение</a>
             <ul class="app-store__list">
               <li class="app-store__item">
-                <a class="app-store__link app-store__link--apple" href="https://www.apple.com/lae/ios/app-store/">Apple</a>
+                <a class="app-store__link app-store__link--apple" href="https://www.apple.com/lae/ios/app-store/"><span class="visually-hidden">Apple</span></a>
               </li>
               <li class="app-store__item">
-                <a class="app-store__link app-store__link--android" href="https://store.google.com">Android</a>
+                <a class="app-store__link app-store__link--android" href="https://store.google.com"><span class="visually-hidden">Android</span></a>
               </li>
               <li class="app-store__item">
-                <a class="app-store__link app-store__link--windows" href="https://www.microsoft.com/ru-ru/store/apps">Windows</a>
+                <a class="app-store__link app-store__link--windows" href="https://www.microsoft.com/ru-ru/store/apps"><span class="visually-hidden">Windows</span></a>
               </li>
             </ul>
-            <p class="app-store__accessibility-note">Доступно для iPhone, iPad, Android,<br>
+            <p class="app-store__note">Доступно для iPhone, iPad, Android,<br>
               Windows Phone, OS X, Windows 8
             </p>
           </div>
@@ -234,5 +236,22 @@
         </div>
       </div>
     </footer>
+    <script>
+  var pageHeader = document.querySelector('.page-header');
+  var navMain = document.querySelector('.main-nav');
+  var navToggle = document.querySelector('.main-nav__toggle');
+
+  navMain.classList.remove('main-nav--nojs');
+
+  navToggle.addEventListener('click', function() {
+    if (pageHeader.classList.contains('main-nav--closed')) {
+      pageHeader.classList.remove('main-nav--closed');
+      pageHeader.classList.add('main-nav--opened');
+    } else {
+      pageHeader.classList.add('main-nav--closed');
+      pageHeader.classList.remove('main-nav--opened');
+    }
+  });
+</script>
   </body>
 </html>

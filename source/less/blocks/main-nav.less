@@ -1,15 +1,89 @@
 .main-nav {
+  /* Чтобы спозиционировать toggle */
+  position: relative;
+
+  /*min-height: 256px;*/
+
   color: #ffffff;
-  background: #283645;
+  background: @bg-menu;
 
   /* Временно для сетки */
-  min-height: 256px;
-  border: 1px solid yellow;
+
+  /* outline: 1px dashed yellow; */
 }
 
-.main-nav__list {
-  /* Временно для сетки */
-  border: 1px solid blue;
+.main-nav__toggle {
+  position: absolute;
+  top: -51px;
+  right: 20px-3px;
+  z-index: 2;
+
+  width: 25px;
+  height: 25px;
+
+  /* background-color: @bg-menu; */
+
+  cursor: pointer;
+  border: none;
+ /*
+  &:hover,
+  &:active {
+    background-color: @bg-menu;
+  }
+  */
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -27px;
+
+  width: 52px;
+  height: 25px;
+
+/*  background-color: @bg-menu; */
+  background-image: url("../img/icon-menu-burger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  /*background-color: rgba(255, 255, 255, 0.3);*/
+}
+
+.main-nav--opened .main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 25px;
+  height: 25px;
+
+/*  background-color: @bg-menu; */
+  background-image: url("../img/icon-menu-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+@media (max-width: @desktop-width - 1) {
+  .main-nav--closed .site-list {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    top: -68px;
+    right: 19px;
+  }
 }
 
 @media (min-width: @desktop-width) {
