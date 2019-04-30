@@ -1,9 +1,11 @@
 .page-header {
+  position: relative;
+  z-index: 1;
 
   color: #ffffff;
   background: @bg-menu;
   &.main-nav--closed {
-    background: @bg-header;
+    background: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -17,16 +19,14 @@
   display: flex;
   flex-direction: column;
 
-  .wrapper(320px; 0);
+  .wrapper();
 
   /* Временно для сетки */
   /* outline: 2px dashed #cc1455; */
 }
 
 .page-header__logo {
-  height: 70px;
-
-  margin-left: 20px;
+  height: 69px;
 
   img {
     width: 75px;
@@ -41,16 +41,6 @@
 
 
 @media (min-width: @tablet-width) {
-  .page-header {
-      &.main-nav--opened {
-        background: @bg-menu;
-      }
-      &.main-nav--closed {
-        background: rgba(242, 242, 242, 0.3);
-      }
-  }
-
-
   .page-header__wrapper {
     width: 660px;
   }
@@ -67,7 +57,7 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
-    background-color: rgba(242, 242, 242, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   .page-header__wrapper {

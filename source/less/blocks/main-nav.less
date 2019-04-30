@@ -7,24 +7,23 @@
   color: #ffffff;
   background: @bg-menu;
 
-  /* Временно для сетки */
-
-  /* outline: 1px dashed yellow; */
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: -51px;
-  right: 20px-3px;
   z-index: 2;
+  top: -47px;
+  right: 0;
 
-  width: 25px;
+  padding: 0;
+  width: 52px;
   height: 25px;
 
-  /* background-color: @bg-menu; */
+  background: none;
 
   cursor: pointer;
   border: none;
+  outline: none;
  /*
   &:hover,
   &:active {
@@ -33,12 +32,16 @@
   */
 }
 
+.main-nav--opened .main-nav__toggle {
+    top: -50px;
+}
+
 .main-nav--closed .main-nav__toggle::before {
   content: "";
 
   position: absolute;
   top: 0;
-  left: -27px;
+  left: 0;
 
   width: 52px;
   height: 25px;
@@ -58,7 +61,7 @@
 
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
 
   width: 25px;
   height: 25px;
@@ -71,6 +74,11 @@
 
 .main-nav--nojs .main-nav__toggle {
   display: none;
+}
+
+.main-nav__list {
+  /* Меню должно выйти из контейнера */
+  margin: 0 -20px;
 }
 
 @media (max-width: @desktop-width - 1) {
