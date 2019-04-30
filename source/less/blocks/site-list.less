@@ -37,13 +37,15 @@
   .site-list {
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
+/*    align-content: center;*/
+/*    align-items: center;*/
+    justify-content: flex-end;
+    padding-top: 42px;
 
-    height: 100%;
   }
 
   .site-list__item {
+    height: 30px;
     padding: 0;
   /*  height: 30px; */
 
@@ -52,7 +54,7 @@
     font-weight: normal;
     text-transform: none;
     /*отодвигаем нижнее подчеркивание*/
-    line-height: 32px;
+    line-height: 18px;
     &--active {
       border-bottom:  2px solid #ffffff;
     }
