@@ -3,40 +3,58 @@
 }
 
 .page-main__welcome {
+  margin-top: -66px;
+
   font-size: 24px;
   font-weight: 300;
+  line-height: 29px;
   color: #ffffff;
-  background: @bg-menu;
+  background-color: @bg-menu;
+  background-repeat: no-repeat;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: top center;
 }
 
 .page-main__welcome-wrapper {
   .wrapper();
 
-  background-image: url("../img/bg-back-mobile@1x.jpg");
+  padding-top: 102px;
+  padding-bottom: 72px;
+
 
   p {
     margin: 0;
     padding: 0;
+    text-align: center;
   }
-
-  /* Временно для сетки */
-  outline: 2px dashed green;
-  min-height: 170px;
 }
 
 
 @media (min-width: @tablet-width) {
+  .page-main__welcome {
+    margin-top: -110px;
+
+    font-size: 50px;
+    line-height: 60px;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: top;
+  }
+
   .page-main__welcome-wrapper {
     width: 660px;
 
-    /* Временно для сетки */
-    min-height: 330px;
+    padding-top: 186px;
+    padding-bottom: 144px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-main__welcome-wrapper {
     .wrapper(960px, 10px);
+
+    padding-top: 102px;
+
 
     /* Временно для сетки */
     min-height: 286px;

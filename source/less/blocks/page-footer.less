@@ -38,11 +38,23 @@
 
   .page-footer__wrapper {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 
-    width: 660px;
-    /* Временно для сетки */
-    min-height: 126px;
+    .wrapper(660px);
+  }
+
+  .page-footer__logo {
+    width: 33.333%;
+  }
+
+  .page-footer__copyright {
+    height: 127px;
+    width: 33.333%;
+  }
+
+  .page-footer__social {
+    width: 33.333%;
+    margin-bottom: 0;
   }
 }
 
@@ -52,4 +64,6 @@
     /* Временно для сетки */
     min-height: 198px;
   }
+
+
 }
