@@ -105,35 +105,58 @@
   .photo__post {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     flex-grow: 1;
+
+    padding: 0 26px;
+    padding-top: 24px;
+    padding-bottom: 22px;
+    min-height: 155px;
 
     .photo--panorama & {
       flex-direction: row;
       flex-wrap: wrap;
+      min-height: 0;
 
       margin-bottom: 50px;
+      padding-bottom: 24px;
     }
+
+     outline: 1px solid red;
   }
 
   .photo__text {
+    margin-bottom: 12px;
     .photo--panorama & {
       order: 2;
+
+      margin-bottom: 0;
     }
   }
 
   .photo__like {
     flex-direction: row-reverse;
     justify-content: space-between;
+    .photo--panorama & {
+      margin-left: auto;
+    }
+    margin-top: auto;
   }
 
   .photo__like-count {
     margin-left: 0;
     .photo--panorama & {
-      margin-right: 14px;
+      margin-right: 17px;
     }
   }
 }
+
+
+
+
+
+
+
+
 
 @media (min-width: @desktop-width) {
   .photo__picture {
