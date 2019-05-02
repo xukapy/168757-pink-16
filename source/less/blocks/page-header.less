@@ -59,5 +59,12 @@
 
   .page-header__logo {
     width: 150px;
+
+    /* не зависимо от состояния
+     * улучшаем селективность
+     */
+    [data-menu-state] & {
+      height: 110px;
+    }
   }
 }
