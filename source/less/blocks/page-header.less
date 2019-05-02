@@ -1,7 +1,12 @@
 .page-header {
+  position: relative;
+  z-index: 1;
 
   color: #ffffff;
   background: @bg-menu;
+  &[data-menu-state='closed'] {
+    background: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .page-header__wrapper {
@@ -9,17 +14,20 @@
   flex-direction: column;
 
   .wrapper();
-
-  /* Временно для сетки */
-  outline: 2px dashed #cc1455;
 }
 
 .page-header__logo {
-  height: 70px;
-  /* Временно для сетки */
-  border: 1px solid orange;
-}
+  height: 69px;
 
+  [data-menu-state='closed'] & {
+    height: 66px;
+  }
+
+  img {
+    width: 75px;
+    height: auto;
+  }
+}
 
 @media (min-width: @tablet-width) {
   .page-header__wrapper {
@@ -27,12 +35,21 @@
   }
 
   .page-header__logo {
-    height: 110px;
+    /* Один пиксель - это рамка меню */
+    height: 109px;
+
+    [data-menu-state='closed'] & {
+      height: 110px;
+    }
   }
 }
 
 
 @media (min-width: @desktop-width) {
+  .page-header {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
   .page-header__wrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -42,5 +59,12 @@
 
   .page-header__logo {
     width: 150px;
+
+    /* не зависимо от состояния
+     * улучшаем селективность
+     */
+    [data-menu-state] & {
+      height: 110px;
+    }
   }
 }

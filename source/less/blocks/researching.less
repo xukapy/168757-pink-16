@@ -1,14 +1,14 @@
-.researching {
+.researching-wrapper {
   display: none;
-  .wrapper(660px);
 
-  /* Временно для сетки */
-  min-height: 424px;
-  outline: 2px dashed blue;
+  .wrapper(660px);
+  padding-top: 96px;
 }
 
 .researching__clock {
   width: 300px;
+  padding-left: 64px;
+  padding-top: 38px;
 
   font-size: 96px;
   font-weight: bold;
@@ -18,15 +18,27 @@
 }
 
 .researching__text {
-  width: 310px;
+  width: 320px;
+  padding: 0 10px;
 }
 
 .researching__title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding-right: 136px;
+
   font-size: 30px;
   font-weight: bold;
   line-height: 36px;
 
+
   color: #000000;
+}
+
+.researching__description {
+  margin: 0;
+  margin-bottom: 10px;
+  line-height: 24px;
 }
 
 .researching__link {
@@ -36,7 +48,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .researching {
+  .researching-wrapper {
     display: flex;
     justify-content: space-between;
   }
@@ -44,17 +56,42 @@
 
 @media (min-width: @desktop-width) {
   .researching {
+    background: @bg-grey;
+  }
+  .researching-wrapper {
+
     .wrapper(960px, 10px);
-    /* Временно для сетки */
-    min-height: 466px;
+
+     padding-top: 113px;
   }
 
   .researching__clock {
+    padding-left: 80px;
+
     font-size: 120px;
     line-height: 187px;
   }
 
+  .researching__title {
+    line-height: 30px;
+    margin-bottom: 24px;
+  }
+
   .researching__text {
-    width: 570px;
+    width: 574px;
+    padding-left: 0;
+    padding-right: 40px;
+    padding-top: 37px;
+  }
+
+  .researching__description {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+
+  .researching__link {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

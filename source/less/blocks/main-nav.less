@@ -1,21 +1,109 @@
 .main-nav {
-  color: #ffffff;
-  background: #283645;
+  /* Чтобы спозиционировать toggle */
+  position: relative;
 
-  /* Временно для сетки */
-  min-height: 256px;
-  border: 1px solid yellow;
+  color: #ffffff;
+  background: @bg-menu;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  z-index: 2;
+  top: -50px;
+  right: 0;
+
+  padding: 0;
+  width: 52px;
+  height: 25px;
+
+  background: none;
+
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  [data-menu-state='closed'] & {
+   /*   размер header уменьшается -
+    *   нужно сдвинуть toggle
+    */
+    top: -47px;
+  }
+ /*
+  &:hover,
+  &:active {
+    background-color: @bg-menu;
+  }
+  */
+}
+
+[data-menu-state='closed'] .main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 52px;
+  height: 25px;
+
+  background-image: url("../img/icon-menu-burger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+[data-menu-state='opened'] .main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/icon-menu-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
 }
 
 .main-nav__list {
-  /* Временно для сетки */
-  border: 1px solid blue;
+  /* Меню должно выйти из контейнера */
+  margin: 0 -20px;
+}
+
+@media (max-width: @desktop-width - 1) {
+  [data-menu-state='closed'] .site-list {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  /* data-menu-state добавлено для
+  *  селективности
+  */
+  [data-menu-state='opened'] .main-nav__toggle,
+  [data-menu-state='closed'] .main-nav__toggle {
+    top: -68px;
+    right: 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    min-height: 110px;
-    width: 644px;
+  /*  min-height: 110px;*/
+    width: 780px;
+
+    background: none;
+    margin-left: auto;
+  }
+
+  .main-nav__list {
+    margin: 0;
   }
 
   .main-nav__toggle {

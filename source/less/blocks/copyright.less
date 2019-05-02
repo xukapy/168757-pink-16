@@ -1,8 +1,35 @@
 .copyright {
-
-  outline: 2px dotted yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .copyright__text {
   line-height: 18px;
+  margin: 0 8px;
+}
+
+.copyright__link {
+  width: 26.943px;
+  height: 34.09px;
+  margin: 0 8px;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    justify-content: flex-end;
+  }
+
+  .copyright__link {
+    margin: 0;
+    margin-left: 7px;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__text {
+    font-size: 18px;
+    line-height: 18px;
+  }
 }
