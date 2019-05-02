@@ -4,41 +4,30 @@
 
   color: #ffffff;
   background: @bg-menu;
-  &.main-nav--closed {
+  &[data-menu-state='closed'] {
     background: rgba(0, 0, 0, 0.3);
   }
 }
-
-/*
-.page-header.main-nav--closed {
-  background: @bg-header;
-}
-*/
 
 .page-header__wrapper {
   display: flex;
   flex-direction: column;
 
   .wrapper();
-
-  /* Временно для сетки */
-  /* outline: 2px dashed #cc1455; */
 }
 
 .page-header__logo {
   height: 69px;
 
-  img {
-    width: 75px;
+  [data-menu-state='closed'] & {
     height: 66px;
   }
+
+  img {
+    width: 75px;
+    height: auto;
+  }
 }
-
-
-.main-nav--closed  .page-header__logo {
-  height: 67px;
-}
-
 
 @media (min-width: @tablet-width) {
   .page-header__wrapper {
@@ -47,10 +36,10 @@
 
   .page-header__logo {
     height: 109px;
-  }
 
-  .main-nav--closed  .page-header__logo {
-    height: 110px;
+    [data-menu-state='closed'] & {
+      height: 110px;
+    }
   }
 }
 

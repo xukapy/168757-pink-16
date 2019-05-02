@@ -2,17 +2,14 @@
   /* Чтобы спозиционировать toggle */
   position: relative;
 
-  /*min-height: 256px;*/
-
   color: #ffffff;
   background: @bg-menu;
-
 }
 
 .main-nav__toggle {
   position: absolute;
   z-index: 2;
-  top: -47px;
+  top: -50px;
   right: 0;
 
   padding: 0;
@@ -24,6 +21,13 @@
   cursor: pointer;
   border: none;
   outline: none;
+
+  [data-menu-state='closed'] & {
+   /*   размер header уменьшается -
+    *   нужно сдвинуть toggle
+    */
+    top: -47px;
+  }
  /*
   &:hover,
   &:active {
@@ -32,11 +36,7 @@
   */
 }
 
-.main-nav--opened .main-nav__toggle {
-    top: -50px;
-}
-
-.main-nav--closed .main-nav__toggle::before {
+[data-menu-state='closed'] .main-nav__toggle::before {
   content: "";
 
   position: absolute;
@@ -46,17 +46,13 @@
   width: 52px;
   height: 25px;
 
-/*  background-color: @bg-menu; */
   background-image: url("../img/icon-menu-burger.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.main-nav--closed .main-nav__toggle:active::before {
-  /*background-color: rgba(255, 255, 255, 0.3);*/
-}
 
-.main-nav--opened .main-nav__toggle::before {
+[data-menu-state='opened'] .main-nav__toggle::before {
   content: "";
 
   position: absolute;
@@ -66,7 +62,6 @@
   width: 25px;
   height: 25px;
 
-/*  background-color: @bg-menu; */
   background-image: url("../img/icon-menu-cross.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -82,21 +77,20 @@
 }
 
 @media (max-width: @desktop-width - 1) {
-  .main-nav--closed .site-list {
+  [data-menu-state='closed'] .site-list {
     display: none;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .main-nav--opened .main-nav__toggle,
-  .main-nav--closed .main-nav__toggle
-   {
+  /* data-menu-state добавлено для
+  *  селективности
+  */
+  [data-menu-state='opened'] .main-nav__toggle,
+  [data-menu-state='closed'] .main-nav__toggle {
     top: -68px;
     right: 0;
   }
-
-
-
 }
 
 @media (min-width: @desktop-width) {
