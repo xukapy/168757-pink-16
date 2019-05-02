@@ -18,7 +18,7 @@
 }
 
 .social__link {
-   margin: auto;
+   margin: 0;
 
    &--twitter {
      width: 17.5px;
@@ -34,4 +34,22 @@
      width: 14.64px;
      height: 13.96px;
    }
+}
+
+@media (min-width: @tablet-width) {
+  .social__link {
+    padding-top: 12px;
+
+    &--twitter {
+      padding-left: 15px;
+    }
+
+    &--facebook {
+      padding-left: 17px;
+    }
+
+    &--youtube {
+      padding-left: 15px;
+    }
+  }
 }
