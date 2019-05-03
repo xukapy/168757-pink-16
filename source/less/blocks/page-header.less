@@ -18,14 +18,14 @@
 
 .page-header__logo {
   height: 69px;
-
+  padding-top: 22px;
   [data-menu-state='closed'] & {
     height: 66px;
   }
 
   img {
     width: 75px;
-    height: auto;
+    height: 22px;
   }
 }
 
@@ -37,11 +37,19 @@
   .page-header__logo {
     /* Один пиксель - это рамка меню */
     height: 109px;
-
+    padding-top: 27px;
     [data-menu-state='closed'] & {
       height: 110px;
     }
+
+    img {
+      display: block;
+      width: 147px;
+      height: auto;
+    }
   }
+
+
 }
 
 
