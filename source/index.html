@@ -41,9 +41,6 @@
       <section class="download">
         <div class="download__wrapper">
           <h2 class="visually-hidden">Загрузка приложения</h2>
-          <div class="download__picture visually-hidden">
-            <img class="download__picture-image" src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Приложение пинк">
-          </div>
           <div class="download__shop app-store">
             <span class="download__slogan">Взгляните на жизнь иначе!</span>
             <a class="app-store__button" href="https://www.apple.com/lae/ios/app-store/">Скачать приложение</a>
@@ -75,31 +72,41 @@
         </div>
         <div class="advantages__wrapper">
           <ul class="advantages__list">
-            <li class="advantages__item advantages__item--cheer">
-              <img class="advantages__photo" src="img/iphone-screen-1-desktop@1x.png"
-                width="292" height="302" alt="Поднимает настроение">
+            <li class="advantages__item">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x">
+                <img src="" alt="Поднимает настроение">
+              </picture>
               <h3 class="advantages__title">Поднимает настроение</h3>
               <p class="advantages__description">Приложение позволит вам победить
                 осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
-            <li class="advantages__item advantages__item--change-world">
-              <img class="advantages__photo" src="img/iphone-screen-2-desktop@1x.png"
-                width="292" height="302" alt="Меняет мир вокруг">
+            <li class="advantages__item">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/iphone-screen-2-desktop@1x.png 1x, img/iphone-screen-2-desktop@2x.png 2x">
+                <img src="" alt="Меняет мир вокруг">
+              </picture>
               <h3 class="advantages__title">Меняет мир вокруг</h3>
               <p class="advantages__description">Сделайте снимок и украсьте его смайликом
                 или текстовой подписью, чтобы усилить&nbsp;эффект</p>
             </li>
-            <li class="advantages__item advantages__item--make-friends">
-              <img class="advantages__photo" src="img/iphone-screen-3-desktop@1x.png"
-                width="292" height="302" alt="Заводит новых друзей">
+            <li class="advantages__item">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
+                <img src="" alt="Заводит новых друзей">
+              </picture>
               <h3 class="advantages__title">Заводит новых друзей</h3>
               <p class="advantages__description">Ставьте лайки, комментируйте, делитесь
                 фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
           <div class="advantages__footer">
-            <img class="advantages__footer-image" src="img/iphone-screen-mobile@1x.png"
-              width="157" height="320" alt="Привет всем!">
+            <picture>
+              <source media="(min-width: 660px) and (max-width: 959px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
+              <source media="(min-width: 320px) and (max-width: 659px)" srcset="img/iphone-screen-mobile@1x.png 1x, img/iphone-screen-mobile@2x.png 2x">
+              <img src=""
+                alt="Пользовательское фото">
+            </picture>
           </div>
         </div>
       </section>
