@@ -1,19 +1,49 @@
 .price {
-  background: @bg-grey;
+  background-color: @bg-grey;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-size: 100%, auto;
+  background-position: top;
 }
 
 .price__wrapper {
   .wrapper();
-  overflow: hidden;
+  padding-top: 92px;
+
+  //overflow: hidden;
   /* Временно для сетки */
-  outline: 2px dashed orange;
+  //outline: 1px solid orange;
+}
+
+.price__list {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 842px;
+  max-width: none;
+  margin-bottom: 40px;
+
+  border-collapse: collapse;
+
+  background-color: #ffffff;
+  color: @bg-menu;
+
 }
 
 .price__plan {
-  background: #283645;
+  padding-top: 16px;
+  padding-bottom: 20px;
+
+  border: 2px solid #e5e5e5;
+  border-top: none;
+  border-bottom: none;
+
+  background-color: @bg-menu;
   color: #ffffff;
   line-height: 30px;
   text-transform: uppercase;
+
 
   &:first-child {
     display: none;
@@ -26,17 +56,36 @@
 }
 
 .price__amount {
+  margin: 0;
+
   font-size: 24px;
   font-weight: 300;
+
 }
 
 .price__option {
+
+  padding-top: 15px;
+  padding-left: 22px;
+  padding-bottom: 14px;
+
+  border: 2px solid #e5e5e5;
+  border-top: none;
+
   line-height: 30px;
   text-transform: uppercase;
 
   &--nosign {
     display: none;
   }
+}
+
+.price__toggles {
+  padding-bottom: 50px;
+
+  /* Рамка неактивных переключателей
+     цвета фона */
+  color: @bg-grey;
 }
 
 @media (min-width: @tablet-width) {

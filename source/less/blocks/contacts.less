@@ -4,9 +4,16 @@
   /* Временно для сетки */
   outline: 2px dashed blue;
   background: #ffffff;
+
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-image: url("../img/bg-map-mobile@1x.png");
 }
 
 .contacts__intro {
+  padding-top: 42px;
+
+
   font-size: 24px;
   font-weight: 300;
   text-align: center;
@@ -14,21 +21,44 @@
   p {
     margin: 0;
     padding: 0;
+    margin-bottom: 5px;
   }
 }
 
 .contacts__list {
   .list-reset();
+  padding-top: 31px;
+}
+
+.contacts__item {
+  text-align: center;
+
+  &:first-child {
+    padding-bottom: 18px;
+  }
+
+  &:nth-child(2) {
+    padding-bottom: 22px;
+  }
+
 }
 
 .contacts__type {
+  margin: 0;
+  margin-bottom: 2px;
+
   font-size: 18px;
   font-weight: bold;
+
+  text-align: center;
 }
 
 .contacts__text {
+  display: inline;
   font-size: 24px;
   font-weight: 300;
+  line-height: 29px;
+
   color: #d22856;
 }
 
