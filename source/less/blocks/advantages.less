@@ -2,6 +2,13 @@
   background: @bg-grey;
 }
 
+.advantages__content {
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-size: 100%, auto;
+  background-position: top;
+}
+
 .advantages__slogan {
   /* min-height: 250px; */
   padding-top: 40px;
@@ -23,6 +30,10 @@
     margin: 0;
     padding: 0;
     margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -32,7 +43,7 @@
 
 .advantages__list {
   .list-reset();
-  padding-top: 47px;
+  padding-top: 79px;
   margin-bottom: 40px;
 }
 
