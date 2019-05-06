@@ -54,20 +54,20 @@
       <section class="form">
         <h2 class="visually-hidden">Основная конкурсная форма</h2>
         <form class="form__wrapper" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="form__fieldset">
-            <label class="field-edit__label" for="surname-field-id">Фамилия:</label>
-            <input id="surname-field-id" class="field-edit" type="text"
+          <fieldset class="form__fieldset form__fieldset--fio">
+            <label class="field-edit__label field-edit__label--oneline" for="surname-field-id">Фамилия:</label>
+            <input id="surname-field-id" class="field-edit field-edit--oneline" type="text"
               placeholder="Укажите фамилию *" name="surname"
               required autofocus>
-            <label class="field-edit__label" for="name-field-id">Имя:</label>
-            <input id="name-field-id" class="field-edit" type="text"
+            <label class="field-edit__label field-edit__label--oneline" for="name-field-id">Имя:</label>
+            <input id="name-field-id" class="field-edit field-edit--oneline" type="text"
               placeholder="Введите ваше имя *" name="name"
               required>
-            <label class="field-edit__label" for="patronymic-field-id">Отчество:</label>
-            <input id="patronymic-field-id" class="field-edit" type="text"
+            <label class="field-edit__label field-edit__label--oneline" for="patronymic-field-id">Отчество:</label>
+            <input id="patronymic-field-id" class="field-edit field-edit--oneline" type="text"
               placeholder="Ну и отчество тоже" name="patronymic">
           </fieldset>
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--achievements">
             <legend class="form__fieldset-legend" >Ваши безбашенные достижения в путешествии</legend>
             <input id="shark-field-id" class="field-checkbox" type="checkbox" name="shark" checked>
             <label class="field-checkbox__label" for="shark-field-id">Сделал селфи с акулой</label>
@@ -82,7 +82,7 @@
             <input id="vandal-field-id" class="field-checkbox" type="checkbox" name="vandal">
             <label class="field-checkbox__label" for="vandal-field-id">Разгромил отель</label>
           </fieldset>
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--contacts">
             <legend class="form__fieldset-legend form__fieldset-legend--nomobile">Контактная информация</legend>
             <label class="field-edit__label" for="tel-field-id">Номер телефона</label>
             <input id="tel-field-id" class="field-edit" type="tel"
@@ -92,7 +92,7 @@
               placeholder="Введите почту *" name="email"
               required>
           </fieldset>
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--apps">
             <legend class="form__fieldset-legend">С каким приложением путешествовали?</legend>
             <input id="ios-field-id" class="field-radio" type="radio" name="os" value="ios" checked>
             <label class="field-checkbox__label" for="ios-field-id">Pink для iOS</label>
@@ -101,7 +101,7 @@
             <input id="windows-field-id" class="field-radio" type="radio" name="os" value="windows">
             <label class="field-checkbox__label" for="windows-field-id">Windows Phone</label>
           </fieldset>
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--emotions">
             <legend class="form__fieldset-legend">Опишите свои эмоции</legend>
             <textarea class="field-edit">Можно прям в красках, не
               стесняясь в выражениях</textarea>
