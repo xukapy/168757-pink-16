@@ -4,7 +4,8 @@
 
   color: #ffffff;
   background: @bg-menu;
-  &[data-menu-state='closed'] {
+
+  &[data-menu-state="closed"] {
     background: rgba(0, 0, 0, 0.3);
   }
 }
@@ -19,7 +20,8 @@
 .page-header__logo {
   height: 69px;
   padding-top: 22px;
-  [data-menu-state='closed'] & {
+
+  [data-menu-state="closed"] & {
     height: 66px;
   }
 
@@ -38,7 +40,8 @@
     /* Один пиксель - это рамка меню */
     height: 109px;
     padding-top: 27px;
-    [data-menu-state='closed'] & {
+
+    [data-menu-state="closed"] & {
       height: 110px;
     }
 
@@ -48,8 +51,6 @@
       height: auto;
     }
   }
-
-
 }
 
 

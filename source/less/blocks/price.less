@@ -9,11 +9,8 @@
 
 .price__wrapper {
   .wrapper();
-  padding-top: 92px;
 
-  //overflow: hidden;
-  /* Временно для сетки */
-  //outline: 1px solid orange;
+  padding-top: 92px;
 }
 
 .price__list {
@@ -29,7 +26,6 @@
 
   background-color: #ffffff;
   color: @bg-menu;
-
 }
 
 .price__plan {
@@ -54,7 +50,7 @@
   &--hit::before {
     position: absolute;
     left: -2px;
-    top: 0px;
+    top: 0;
 
     display: block;
     width: 73px;
@@ -62,7 +58,7 @@
 
     content: "";
 
-    background-image: url(../img/bg-hit.svg);
+    background-image: url("../img/bg-hit.svg");
     background-repeat: no-repeat;
   }
 
@@ -109,7 +105,7 @@
 
     content: "";
 
-    background-image: url(../img/icon-yes.svg);
+    background-image: url("../img/icon-yes.svg");
     background-repeat: no-repeat;
     background-size: 31px;
   }
@@ -125,7 +121,7 @@
 
     content: "";
 
-    background-image: url(../img/icon-no.svg);
+    background-image: url("../img/icon-no.svg");
     background-repeat: no-repeat;
     background-size: 27px;
   }
@@ -141,10 +137,7 @@
 
   font-size: 24px;
   font-weight: 300;
-
 }
-
-
 
 .price__toggles {
   padding-bottom: 50px;
