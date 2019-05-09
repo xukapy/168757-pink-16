@@ -9,8 +9,12 @@
   <body>
     <header class="page-header" data-menu-state="opened">
       <div class="page-header__wrapper">
-        <a class="page-header__logo" href="index.html" >
-          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
+        <a class="page-header__logo">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+            <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
+          </picture>
         </a>
         <nav class="main-nav main-nav--nojs">
           <button class="main-nav__toggle" type="button">
@@ -40,6 +44,106 @@
             путешествие с Пинк</p>
         </div>
       </div>
+      <div class="competition">
+        <div class="competition__wrapper">
+          <p>Поделитесь своей историей и получите
+            шанс выиграть ценный приз - 1000
+            миль на вашу бонулную карту!<p>
+        </div>
+      </div>
+      <section class="form">
+        <h2 class="visually-hidden">Основная конкурсная форма</h2>
+        <form class="form__wrapper" name="competition-form" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="form__fieldset form__fieldset--fio">
+            <label class="field-edit">
+              <span class="field-edit__label">Фамилия:</span>
+              <input class="field-edit__input" type="text"
+                placeholder="Укажите фамилию *" name="surname"
+                required autofocus>
+            </label>
+            <label class="field-edit">
+              <span class="field-edit__label">Имя:</span>
+              <input class="field-edit__input" type="text"
+                placeholder="Введите ваше имя *" name="name"
+                required>
+            </label>
+            <label class="field-edit">
+              <span class="field-edit__label">Отчество:</span>
+              <input class="field-edit__input" type="text"
+                placeholder="Ну и отчество тоже" name="patronymic">
+            </label>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--achievements">
+            <legend class="form__fieldset-legend" >Ваши безбашенные достижения в путешествии</legend>
+            <div class="form__fieldset--flex-wrapper">
+              <label class="field-checkbox">
+                <input class="field-checkbox__input" type="checkbox" name="achievements[]" value="shark" checked>
+                <span class="field-checkbox__label">Сделал селфи с акулой</span>
+              </label>
+              <label class="field-checkbox">
+                <input class="field-checkbox__input" type="checkbox" name="achievements[]" value="beach" checked>
+                <span class="field-checkbox__label">Обгорел на пляже</span>
+              </label>
+              <label class="field-checkbox">
+                <input class="field-checkbox__input" type="checkbox" name="achievements[]" value="сhuck">
+                <span class="field-checkbox__label">Видел Чака Норриса</span>
+              </label>
+              <label class="field-checkbox">
+                <input class="field-checkbox__input" type="checkbox"  name="achievements[]" value="souvenir">
+                <span class="field-checkbox__label">Накупил сувениров</span>
+              </label>
+              <label class="field-checkbox">
+                <input class="field-checkbox__input" type="checkbox" name="achievements[]" value="tower" checked>
+                <span class="field-checkbox__label">Удержал башню</span>
+              </label>
+              <label class="field-checkbox">
+                <input class="field-checkbox__input" type="checkbox" name="achievements[]" value="vandal">
+                <span class="field-checkbox__label">Разгромил отель</span>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--contacts">
+            <legend class="form__fieldset-legend form__fieldset-legend--nomobile">Контактная информация</legend>
+            <div class="form__fieldset--flex-wrapper">
+              <label class="field-edit">
+                <span class="field-edit__label">Номер телефона</span>
+                <input class="field-edit__input" type="tel"
+                  placeholder="Номер, пожалуйста" name="tel">
+              </label>
+              <label class="field-edit">
+                <span class="field-edit__label">Адрес почты</span>
+                <input class="field-edit__input" type="email"
+                  placeholder="Введите почту *" name="email"
+                  required>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--apps">
+            <legend class="form__fieldset-legend">С каким приложением путешествовали?</legend>
+            <label class="field-radio">
+              <input class="field-radio__input" type="radio" name="os" value="ios" checked>
+              <span class="field-radio__label">Pink для iOS</span>
+            </label>
+            <label class="field-radio">
+              <input class="field-radio__input" type="radio" name="os" value="android">
+              <span class="field-radio__label">Pink на Android</span>
+            </label>
+            <label class="field-radio">
+              <input class="field-radio__input" type="radio" name="os" value="windows">
+              <span class="field-radio__label">Windows Phone</span>
+            </label>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--emotions">
+            <legend class="form__fieldset-legend">Опишите свои эмоции</legend>
+            <textarea class="field-edit">Можно прям в красках, не
+              стесняясь в выражениях</textarea>
+          </fieldset>
+          <div class="form__send-wrapper">
+            <button class="form__submit-btn" type="submit">Отправить форму</button>
+            <small class="form__legend"><span class="form__legend--color">*</span>-обязательные поля</small>
+          </div>
+        </form>
+      </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
@@ -88,21 +192,6 @@
         </div>
       </div>
     </footer>
-    <script>
-  var pageHeader = document.querySelector('.page-header');
-  var navMain = document.querySelector('.main-nav');
-  var navToggle = document.querySelector('.main-nav__toggle');
-
-  navMain.classList.remove('main-nav--nojs');
-
-  navToggle.addEventListener('click', function() {
-    if (pageHeader.dataset.menuState == 'closed') {
-      pageHeader.setAttribute('data-menu-state','opened');
-    } else {
-      pageHeader.setAttribute('data-menu-state','closed');
-    }
-
-  });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

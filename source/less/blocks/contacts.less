@@ -1,12 +1,10 @@
 .contacts {
   .wrapper();
-
-  /* Временно для сетки */
-  outline: 2px dashed blue;
-  background: #ffffff;
 }
 
 .contacts__intro {
+  padding-top: 42px;
+
   font-size: 24px;
   font-weight: 300;
   text-align: center;
@@ -14,30 +12,66 @@
   p {
     margin: 0;
     padding: 0;
+    margin-bottom: 5px;
   }
 }
 
 .contacts__list {
   .list-reset();
+  padding-top: 31px;
+  padding-bottom: 36px;
+}
+
+.contacts__item {
+  text-align: center;
+
+  &:first-child {
+    padding-bottom: 18px;
+  }
+
+  &:nth-child(2) {
+    padding-bottom: 22px;
+  }
 }
 
 .contacts__type {
+  margin: 0;
+  margin-bottom: 2px;
+
   font-size: 18px;
   font-weight: bold;
+
+  text-align: center;
 }
 
 .contacts__text {
+  display: inline;
   font-size: 24px;
   font-weight: 300;
+  line-height: 29px;
+
   color: #d22856;
 }
 
 .contacts__map {
-  margin-left: -20px;
-  margin-right: -20px;
+  height: 200px;
+  margin: 0 -20px;
+  padding-top: 94px;
 
-  color: #ffffff;
-  background: url("../img/bg-map-mobile@1x.png") no-repeat center;
+  text-align: center;
+
+  background-repeat: no-repeat;
+  background-position: top, bottom;
+  background-image: url("../img/bg-triangle-white-footer.svg"),
+    url("../img/bg-map-mobile@1x.png");
+  background-size: 100% auto;
+
+  @media (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-triangle-white-footer.svg"),
+      url("../img/bg-map-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -52,7 +86,13 @@
   }
 
   .contacts__map {
-    background: url("../img/bg-map-tablet@1x.jpg") no-repeat center;
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+      background-size: 700px auto;
+    }
 
     min-height: 496px;
   }
@@ -70,7 +110,13 @@
   }
 
   .contacts__map {
-    background: url("../img/bg-map-desktop@1x.jpg") no-repeat center;
+    background-size: cover;
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+    }
 
     min-height: 500px;
   }

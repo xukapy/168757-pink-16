@@ -1,0 +1,52 @@
+.form__wrapper {
+  .wrapper();
+}
+
+.form__legend {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .form__wrapper {
+    .wrapper(660px);
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__fieldset {
+    &--apps {
+      order: 1;
+    }
+
+    &--contacts {
+      order: 2;
+    }
+
+    &--achievements {
+      order: 3;
+    }
+
+    &--emotions {
+      order: 4;
+    }
+  }
+
+  .form__send-wrapper {
+    display: flex;
+
+    order: 5;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__wrapper {
+    .wrapper(960px, 10px);
+  }
+
+  .form__fieldset {
+    &--flex-wrapper {
+      display: flex;
+    }
+  }
+}

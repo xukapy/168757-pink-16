@@ -1,22 +1,129 @@
 .price {
-  background: @bg-grey;
+  background-color: @bg-grey;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-size: 100%, auto;
+  background-position: top;
+  overflow: hidden;
 }
 
 .price__wrapper {
   .wrapper();
-  overflow: hidden;
-  /* Временно для сетки */
-  outline: 2px dashed orange;
+
+  padding-top: 92px;
+}
+
+.price__list {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 842px;
+  max-width: none;
+  margin-bottom: 40px;
+
+  border-collapse: collapse;
+
+  background-color: #ffffff;
+  color: @bg-menu;
 }
 
 .price__plan {
-  background: #283645;
+  position: relative;
+
+  padding-top: 16px;
+  padding-bottom: 20px;
+
+  border: 2px solid #e5e5e5;
+  border-top: none;
+  border-bottom: none;
+
+  background-color: @bg-menu;
   color: #ffffff;
   line-height: 30px;
   text-transform: uppercase;
 
   &:first-child {
     display: none;
+  }
+
+  &--hit::before {
+    position: absolute;
+    left: -2px;
+    top: 0;
+
+    display: block;
+    width: 73px;
+    height: 73px;
+
+    content: "";
+
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--hit::after {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+
+    content: "ХИТ";
+
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 30px;
+    text-transform: uppercase;
+    transform: rotate(-45deg);
+  }
+}
+
+.price__option {
+  position: relative;
+
+  padding-top: 15px;
+  padding-left: 22px;
+  padding-bottom: 14px;
+
+  border: 2px solid #e5e5e5;
+  border-top: none;
+
+  line-height: 30px;
+  text-transform: uppercase;
+
+  &--nosign {
+    display: none;
+  }
+
+  &--yes::before {
+    position: absolute;
+    right: 18px;
+    top: 19px;
+
+    display: block;
+    width: 31px;
+    height: 31px;
+
+    content: "";
+
+    background-image: url("../img/icon-yes.svg");
+    background-repeat: no-repeat;
+    background-size: 31px;
+  }
+
+  &--no::before {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+
+    display: block;
+    width: 27px;
+    height: 27px;
+
+    content: "";
+
+    background-image: url("../img/icon-no.svg");
+    background-repeat: no-repeat;
+    background-size: 27px;
   }
 }
 
@@ -26,17 +133,18 @@
 }
 
 .price__amount {
+  margin: 0;
+
   font-size: 24px;
   font-weight: 300;
 }
 
-.price__option {
-  line-height: 30px;
-  text-transform: uppercase;
+.price__toggles {
+  padding-bottom: 50px;
 
-  &--nosign {
-    display: none;
-  }
+  /* Рамка неактивных переключателей
+     цвета фона */
+  color: @bg-grey;
 }
 
 @media (min-width: @tablet-width) {

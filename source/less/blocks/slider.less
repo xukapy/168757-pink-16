@@ -1,0 +1,50 @@
+.slider__item {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.slider__toggles {
+  display: flex;
+  justify-content: center;
+}
+
+.slider__toggle {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 3px solid;
+
+  border-radius: 6px;
+  background-color: rgba(40, 54, 69, 0.3);
+
+  padding: 0;
+  margin: 0 6px;
+
+  /* Важно! Рамка неактивного переключателя
+     будет цветом родителя.
+   */
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: rgba(40, 54, 69, 0.6);
+  }
+
+  &:active {
+    background-color: rgba(40, 54, 69, 0.1);
+  }
+
+  &--active {
+    background-color: #ffffff;
+    border-color: #283645;
+
+    &:hover,
+    &:active {
+      background-color: #ffffff;
+    }
+  }
+}
