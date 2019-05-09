@@ -6,16 +6,36 @@
 }
 
 .researching__clock {
+  position: relative;
   width: 300px;
-  padding-left: 64px;
-  padding-top: 38px;
+  padding-left: 17px;
+  padding-top: 18px;
+  padding-right: 75px;
 
+  svg {
+    position: absolute;
+    top: -72px;
+    left: 0;
+    width: 239px;
+    fill: #dedede;
+    z-index: -1;
+  }
+}
+
+.researching__time {
   font-size: 96px;
   font-weight: bold;
   line-height: 150px;
-
   color: #d22856;
+  border: 14px solid;
+  border-radius: 100%;
+  display: block;
+  width: 206px;
+  height: 202px;
+  text-align: center;
+  padding-top: 7px;
 }
+
 
 .researching__text {
   width: 320px;
