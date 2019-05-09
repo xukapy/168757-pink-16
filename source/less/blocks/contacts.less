@@ -5,9 +5,9 @@
   outline: 2px dashed blue;
   background: #ffffff;
 
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-image: url("../img/bg-map-mobile@1x.png");
+//  background-repeat: no-repeat;
+//  background-position: bottom;
+//  background-image: url("../img/bg-map-mobile@1x.png");
 }
 
 .contacts__intro {
@@ -28,6 +28,7 @@
 .contacts__list {
   .list-reset();
   padding-top: 31px;
+  padding-bottom: 36px;
 }
 
 .contacts__item {
@@ -63,19 +64,22 @@
 }
 
 .contacts__map {
-  margin-left: -20px;
-  margin-right: -20px;
+  height: 200px;
+  margin: 0 -20px;
 
-  color: #ffffff;
   background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("../img/bg-map-mobile@1x.png");
+  background-position: top, bottom;
+  background-image: url("../img/bg-triangle-white-footer.svg")
+                  , url("../img/bg-map-mobile@1x.png");
+  background-size: 100% auto;
 
   @media (min-resolution: @retina-dpi),
          (min-resolution: @retina-dppx) {
-    background-image: url("../img/bg-map-mobile@2x.png");
+    background-image: url("../img/bg-triangle-white-footer.svg")
+                    , url("../img/bg-map-mobile@2x.jpg");
     background-size: 320px auto;
   }
+
 }
 
 @media (min-width: @tablet-width) {
