@@ -150,22 +150,88 @@
 @media (min-width: @tablet-width) {
   .price__wrapper {
     width: 660px;
+    padding-top: 88px;
+    padding-bottom: 68px;
   }
 
   .price__list {
-    width: 620px;
+    width: 100%;
+    margin: 0;
   }
 
   .price__plan {
-    &:first-child {
+    padding-top: 12px;
+    padding-bottom: 8px;
+
+    border-bottom: 2px solid #283645;
+
+    &--hit::before {
+      left: 0;
+      top: 0;
+
       display: block;
+      width: 61px;
+      height: 61px;
+
+      background-image: url("../img/bg-hit-tablet.svg");
     }
+
+    &--hit::after {
+      left: 7px;
+      top: 4px;
+    }
+
+    &:first-child {
+      display: table-cell;
+
+      border-bottom: 2px solid #e5e5e5;
+      border-left: none;
+      border-right: 2px solid #283645;
+
+      background-color: #f2f2f2;
+    }
+
+    &:last-child {
+      border-right: 2px solid #283645;
+    }
+
+  }
+
+  .price__name {
+    font-size: 16px;
+  }
+
+  .price__amount {
+    margin-top: -4px;
+
+    font-size: 18px;
   }
 
   .price__option {
+    font-size: 0;
+    width: 25%;
+
+    padding-top: 7px;
+    padding-left: 15px;
+    padding-bottom: 8px;
+
     &--nosign {
-      display: block;
+      display: table-cell;
+
+      font-size: 14px;
+      text-transform: none;
     }
+
+    &--yes::before {
+      top: calc(50% - 12px);
+      left: calc(50% - 16px);
+    }
+
+    &--no::before {
+      top: 9px;
+      left: calc(50% - 13px);
+    }
+
   }
 
   .price__toggles {

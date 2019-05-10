@@ -1,7 +1,5 @@
-.reviews {
+.reviews__wrapper {
   .wrapper();
-  /* Временно для сетки */
-  //outline: 2px dashed #cc1455;
 }
 
 .reviews__author-name {
@@ -47,12 +45,8 @@
 }
 
 @media (min-width: @tablet-width) {
-  .reviews {
+  .reviews__wrapper  {
     width: 660px;
-  }
-
-  .reviews__author-about {
-    display: block;
   }
 
   .reviews__item {
@@ -60,8 +54,29 @@
     flex-direction: column;
   }
 
+  .reviews__author-name {
+    margin-bottom: 5px;
+
+    font-size: 20px;
+  }
+
+  .reviews__author-about {
+    display: block;
+
+    margin: 0;
+    margin-bottom: 37px;
+  }
+
   .reviews__text {
     order: -1;
+
+    margin-bottom: 35px;
+
+    font-size: 18px;
+  }
+
+  .reviews__toggles {
+    padding-bottom: 21px;
   }
 }
 
