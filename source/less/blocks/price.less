@@ -242,10 +242,61 @@
 @media (min-width: @desktop-width) {
   .price__wrapper {
     .wrapper(960px, 10px);
+
+     padding-top: 152px;
+     padding-bottom: 95px;
   }
 
   .price__list {
-    width: 940px;
-    min-height: 280px;
+    width: 100%;
+    /*Для сетки*/
+    //min-height: 280px;
   }
+
+  .price__plan {
+    padding-top: 16px;
+    padding-bottom: 18px;
+
+    &--hit::before{
+      width: 74px;
+      height: 74px;
+
+      background-image: url("../img/bg-hit.svg");
+    }
+
+    &--hit::after {
+      left: 11px;
+      top: 12px;
+    }
+  }
+
+  .price__name {
+    font-size: 18px;
+  }
+
+  .price__amount {
+    margin-top: 0;
+
+    font-size: 24px;
+  }
+
+  .price__option {
+    padding-top: 14px;
+    padding-left: 21px;
+    padding-bottom: 15px;
+
+    &--nosign {
+      font-size: 18px;
+    }
+
+    &--yes::before {
+      top: calc(50% - 9px);
+    }
+
+    &--no::before {
+      top: 16px;
+      left: calc(50% - 14px);
+    }
+  }
+
 }

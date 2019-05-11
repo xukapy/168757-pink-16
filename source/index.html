@@ -133,6 +133,24 @@
       <section class="reviews">
         <div class="reviews__wrapper slider">
           <h2 class="visually-hidden">Отзывы о нас</h2>
+          <svg class="reviews__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="78.672px" height="63.789px" viewBox="0 0 78.672 63.789" enable-background="new 0 0 78.672 63.789" xml:space="preserve">
+            <g>
+              <path d="M34.967,7.063L30.713,0C28.272,1.495,0,12.207,0,39.617c0,7.231,0.336,24.172,18.9,24.172 c11.187,0,13.94-10.279,13.94-13.584c0-21.977-21.382-14.177-21.382-14.177C11.458,17.957,31.263,9.184,34.967,7.063z"/>
+            </g>
+            <g>
+              <path d="M78.672,7.063L74.418,0c-2.44,1.495-30.713,12.207-30.713,39.617c0,7.231,0.337,24.172,18.9,24.172 c11.187,0,13.939-10.279,13.939-13.584c0-21.977-21.381-14.177-21.381-14.177C55.165,17.957,74.969,9.184,78.672,7.063z"/>
+            </g>
+          </svg>
+          <button class="reviews__arrow reviews__arrow--left  slider_arrow" type="button" name="left-arrow">
+            <svg version="1.1" id="left-arrow-id" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.706px" height="41.719px" viewBox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
+              <path d="M2.045,20.859L21.458,1.446c0.331-0.331,0.331-0.867,0-1.198c-0.33-0.331-0.867-0.331-1.197,0L0.248,20.261 c-0.331,0.33-0.331,0.867,0,1.197l20.013,20.013c0.164,0.165,0.382,0.248,0.599,0.248s0.434-0.083,0.599-0.248 c0.331-0.331,0.331-0.867,0-1.198L2.045,20.859z"/>
+            </svg>
+          </button>
+          <button class="reviews__arrow reviews__arrow--right  slider_arrow" type="button" name="right-arrow">
+            <svg version="1.1" id="right-arrow-id" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.706px" height="41.719px" viewBox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
+              <path d="M19.661,20.859L0.248,1.446c-0.331-0.331-0.331-0.867,0-1.198c0.33-0.331,0.867-0.331,1.197,0l20.013,20.012 c0.33,0.33,0.33,0.867,0,1.197L1.445,41.471c-0.164,0.165-0.382,0.248-0.599,0.248s-0.434-0.083-0.599-0.248 c-0.331-0.331-0.331-0.867,0-1.198L19.661,20.859z"/>
+            </svg>
+          </button>
           <div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item slider__item--active">
               <cite class="reviews__author-name">Николай Петров</cite>
@@ -211,38 +229,42 @@
         </div>
       </section>
       <section class="contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__intro">
-          <p>Остались вопросы?</p>
-          <p>Свяжитесь с нами!</p>
+        <div class="contacts-wrapper">
+          <h2 class="visually-hidden">Контакты</h2>
+          <div class="contacts__intro">
+            <p>Остались вопросы?</p>
+            <p>Свяжитесь с нами!</p>
+          </div>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <p class="contacts__type">Звоните:</p>
+              <a class="contacts__text" href="tel:+7812-555-6666">+7 (812) 555-66-66</a>
+            </li>
+            <li class="contacts__item">
+              <p class="contacts__type">Пишите:</p>
+              <a class="contacts__text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+            <li class="contacts__item">
+              <p class="contacts__type">Приезжайте в гости:</p>
+              <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
+            </li>
+          </ul>
         </div>
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <p class="contacts__type">Звоните:</p>
-            <a class="contacts__text" href="tel:+7812-555-6666">+7 (812) 555-66-66</a>
-          </li>
-          <li class="contacts__item">
-            <p class="contacts__type">Пишите:</p>
-            <a class="contacts__text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </li>
-          <li class="contacts__item">
-            <p class="contacts__type">Приезжайте в гости:</p>
-            <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
-          </li>
-        </ul>
         <div class="contacts__map">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35.983px" height="35.983px" viewBox="0 0 35.983 35.983" enable-background="new 0 0 35.983 35.983" xml:space="preserve">
             <circle fill="#FFFFFF" cx="17.991" cy="17.991" r="17.991"/>
             <circle fill="#D22856" cx="17.991" cy="17.991" r="7.866"/>
           </svg>
-          <!--img class="contacts__map-image" src="img/bg-triangle-white-footer.svg" width="258" height="286" alt="Приложение пинк"-->
         </div>
       </section>
     </main>
     <footer class="page-footer page-footer--hidden">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
             <img src="img/logo-pink-blue-mobile.svg" width="146.3px" height="40.375" alt="PINK">
+          </picture>
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">
