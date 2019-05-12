@@ -201,16 +201,38 @@
           <div class="photo-editor__controls">
             <ul class="photo-editor__tools-list">
               <li class="photo-editor__tools-item">
-                <input class="photo-editor__tool photo-editor__tool--resize photo-editor__tool--active" type="checkbox" name="resize" checked>
+                <label class="photo-editor__tool">
+                  <input  type="radio" name="tool" value="crop" checked>
+                  <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                    <path fill="none" d="M0,0h48v48H0V0z"/>
+                    <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
+                  </svg>
+                </label>
+                <input class="photo-editor__slider photo-editor__slider--crop" type="range" name="crop-slider" >
               </li>
-              <li class="photo-editor__tools-item">
-                <input class="photo-editor__tool photo-editor__tool--fill" type="checkbox" name="fill">
+              <li class="photo-editor__tools-item photo-editor__tools-item--fill">
+                <label class="photo-editor__tool">
+                  <input type="radio" name="tool" value="fill">
+                  <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                    <path fill="none" d="M0,0h48v48H0V0z"/>
+                    <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/>
+                    <rect y="40" width="48" height="3"/>
+                  </svg>
+                </label>
+                <input class="photo-editor__slider photo-editor__slider--fill" type="range" name="fill-slider">
               </li>
-              <li class="photo-editor__tools-item">
-                <input class="photo-editor__tool photo-editor__tool--contrast" type="checkbox" name="contrast">
+              <li class="photo-editor__tools-item photo-editor__tools-item--contrast">
+                <label class="photo-editor__tool">
+                  <input type="radio" name="tool" value="contrast">
+                  <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.92px" height="31.92px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
+                    <path d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
+                    <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
+                  </svg>
+                </label>
+                <input class="photo-editor__slider photo-editor__slider--contrast" type="range" name="contrast-slider">
               </li>
             </ul>
-            <ul class="photo-editor__sliders-list">
+            <!--ul class="photo-editor__sliders-list">
               <li class="photo-editor__sliders-item">
                 <input class="photo-editor__slider" type="range" name="resize-slider" >
               </li>
@@ -220,7 +242,7 @@
               <li class="photo-editor__sliders-item">
                 <input class="photo-editor__slider" type="range" name="contrast-slider">
               </li>
-            </ul>
+            </ul-->
             <div class="photo-editor__buttons">
               <button class="photo-editor__button photo-editor__button--post" type="submit">Запостить</button>
               <button class="photo-editor__button photo-editor__button--cancel" type="reset">Отмена</button>
@@ -276,21 +298,6 @@
         </div>
       </div>
     </footer>
-    <script>
-  var pageHeader = document.querySelector('.page-header');
-  var navMain = document.querySelector('.main-nav');
-  var navToggle = document.querySelector('.main-nav__toggle');
-
-  navMain.classList.remove('main-nav--nojs');
-
-  navToggle.addEventListener('click', function() {
-    if (pageHeader.dataset.menuState == 'closed') {
-      pageHeader.setAttribute('data-menu-state','opened');
-    } else {
-      pageHeader.setAttribute('data-menu-state','closed');
-    }
-
-  });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
