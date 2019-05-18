@@ -1,7 +1,43 @@
 .field-edit {
   display: block;
+
 }
 
 .field-edit__label {
   display: block;
+  margin-left: 22px;
+  margin-bottom: 5px;
+
+  line-height: 30px;
+
+  color: @cl-pink;
+  text-transform: uppercase;
+}
+
+.field-edit__input {
+
+  width: 100%;
+//  padding: 13px 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-top: 14px;
+  margin-bottom: 17px;
+
+
+  font-size: 18px;
+  line-height: 30px;
+
+  color: #283645;
+
+  border: 2px solid #e5e5e5;
+
+  &::placeholder {
+    color: #283645;
+  }
+
+  &--multi {
+    resize: none;
+    height: 201px;
+  }
 }

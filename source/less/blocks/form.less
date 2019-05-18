@@ -2,9 +2,100 @@
   .wrapper();
 }
 
+.form__fieldset {
+  position: relative;
+
+  border: none;
+  padding: 0;
+  padding-bottom: 25px;
+  margin: 0;
+
+  &--achievements {
+    margin: 0 -20px;
+    padding: 0 20px;
+    padding-top: 117px;
+
+    background-color: @bg-grey;
+
+  }
+
+  &--contacts {
+    padding-top: 32px;
+  }
+
+  &--apps {
+    margin: 0 -20px;
+    padding: 0 20px;
+    padding-top: 113px;
+    padding-bottom: 2px;
+
+    background-color: @bg-grey;
+  }
+
+  &--emotions {
+    padding-top: 72px;
+    padding-bottom: 24px;
+  }
+}
+
+.form__fieldset-legend {
+  position: absolute;
+  top: 38px;
+
+  width: 240px;
+  margin: 0 20px;
+  //padding: 0 20px;
+
+  line-height: 18px;
+
+  color: @cl-pink;
+  text-transform: uppercase;
+  text-align: center;
+
+  &--nomobile {
+    display: none;
+  }
+}
+
+.form__send-wrapper {
+  padding-bottom: 14px;
+}
+
+.form__submit-btn {
+  width: 100%;
+
+  padding-top: 15px;
+  padding-bottom: 16px;
+  margin-bottom: 35px;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+
+  text-transform: uppercase;
+  color: #ffffff;
+
+  border-color: #2aab6d;
+  background-color: #2aab6d;
+  border-radius: 2px;
+}
+
 .form__legend {
   display: block;
+
+  font-size: 14px;
+  line-height: 30px;
+
+  color: #283645;
+  text-transform: uppercase;
+  text-align: center;
+
+  &--color {
+    color: @cl-pink;
+  }
 }
+
+
 
 @media (min-width: @tablet-width) {
   .form__wrapper {
