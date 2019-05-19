@@ -48,26 +48,27 @@
         <div class="page-main__competition-wrapper">
           <p>Поделитесь своей историей и получите
             шанс выиграть ценный приз &mdash; 1000
-            миль на вашу бонусную карту!</p>
+            миль на вашу бонусную карту!
+            <span class="page-main--nomobile">Пожалуйста, заполните форму ниже:</span></p>
         </div>
       </div>
       <section class="form">
         <h2 class="visually-hidden">Основная конкурсная форма</h2>
         <form class="form__wrapper" name="competition-form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="form__fieldset form__fieldset--fio">
-            <label class="field-edit">
+            <label class="field-edit field-edit--row">
               <span class="field-edit__label">Фамилия:</span>
               <input class="field-edit__input" type="text"
                 placeholder="Укажите фамилию *" name="surname"
                 required autofocus>
             </label>
-            <label class="field-edit">
+            <label class="field-edit field-edit--row">
               <span class="field-edit__label">Имя:</span>
               <input class="field-edit__input" type="text"
                 placeholder="Введите ваше имя *" name="name"
                 required>
             </label>
-            <label class="field-edit">
+            <label class="field-edit field-edit--row">
               <span class="field-edit__label">Отчество:</span>
               <input class="field-edit__input" type="text"
                 placeholder="Ну и отчество тоже" name="patronymic">
@@ -105,12 +106,12 @@
           <fieldset class="form__fieldset form__fieldset--contacts">
             <legend class="form__fieldset-legend form__fieldset-legend--nomobile">Контактная информация</legend>
             <div class="form__fieldset--flex-wrapper">
-              <label class="field-edit">
+              <label class="field-edit field-edit--contacts field-edit--tel">
                 <span class="field-edit__label">Номер телефона</span>
                 <input class="field-edit__input" type="tel"
                   placeholder="Номер, пожалуйста" name="tel">
               </label>
-              <label class="field-edit">
+              <label class="field-edit field-edit--contacts field-edit--mail">
                 <span class="field-edit__label">Адрес почты</span>
                 <input class="field-edit__input" type="email"
                   placeholder="Введите почту *" name="email"

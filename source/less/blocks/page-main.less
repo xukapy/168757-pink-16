@@ -48,6 +48,10 @@
   }
 }
 
+.page-main--nomobile {
+  display: none;
+}
+
 
 @media (min-width: @tablet-width) {
   .page-main__welcome {
@@ -70,6 +74,25 @@
 
     padding-top: 179px;
     padding-bottom: 140px;
+
+    &--competition {
+      padding-bottom: 80px;
+    }
+  }
+
+  .page-main__competition-wrapper {
+    width: 600px;
+    padding-top: 92px;
+    padding-bottom: 71px;
+
+    p {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  .page-main--nomobile {
+    display: inline;
   }
 }
 
