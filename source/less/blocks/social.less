@@ -12,8 +12,17 @@
   height: 52px;
   margin: 0 6px;
 
-  border: 4px solid #e9ebec;
+  border: 4px solid;
   border-radius: 52px;
+  border-color: rgba(40,54,69,0.1);
+
+  &:hover {
+    border-color: rgba(40,54,69);
+  }
+
+  &:active {
+    border-color: rgba(40,54,69,0.1);
+  }
 }
 
 .social__link {
@@ -38,6 +47,10 @@
     width: 14.64px;
     height: 13.96px;
     padding-left: 15px;
+  }
+
+  &:active {
+    fill: rgba(210,40,86,0.3);
   }
 }
 

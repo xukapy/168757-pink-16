@@ -32,6 +32,10 @@
     border-radius: 19.5px;
     background-color: #ffffff;
 
+    &:active {
+      border-color: @cl-pink;
+    }
+
 
     .field-radio__input:checked + & {
       background-image: url("../img/icon-map-marker.svg");
@@ -39,6 +43,14 @@
       background-size: 33px 33px;
       background-position: center;
     }
+  }
+
+  &:hover::before  {
+    border-color: #283645;
+  }
+
+  &:active::before  {
+    border-color: @cl-pink;
   }
 }
 

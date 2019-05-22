@@ -13,8 +13,8 @@
   right: 0;
 
   padding: 0;
-  width: 52px;
-  height: 25px;
+  width: 24px;
+  height: 24px;
 
   background: none;
 
@@ -22,43 +22,33 @@
   border: none;
   outline: none;
 
+  fill: #ffffff;
+
   [data-menu-state="closed"] & {
     /*   размер header уменьшается -
     *   нужно сдвинуть toggle
     */
     top: -47px;
+
+    width: 50px;
   }
+
+  &:hover {
+    fill: @cl-pink;
+  }
+
+  &:active {
+    fill: rgba(210,40,86, 0.3);
+  }
+
 }
 
-[data-menu-state="closed"] .main-nav__toggle::before {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 52px;
-  height: 25px;
-
-  background-image: url("../img/icon-menu-burger.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+[data-menu-state="closed"] #icon-menu-cross {
+  display: none;
 }
 
-
-[data-menu-state="opened"] .main-nav__toggle::before {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  width: 25px;
-  height: 25px;
-
-  background-image: url("../img/icon-menu-cross.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+[data-menu-state="opened"] #icon-menu-burger {
+  display: none;
 }
 
 .main-nav--nojs .main-nav__toggle {
