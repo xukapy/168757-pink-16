@@ -14,12 +14,40 @@
   display: block;
   margin-bottom: 40px;
 
+  text-align: center;
+
+  #logo-pink-blue-desktop {
+    display: none;
+  }
+
+  svg {
+    width: 146.3px;
+
+    fill: #283645;
+  }
+
+  &:hover {
+    svg {
+      fill: @cl-pink;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: #283645;
+      opacity: 0.3;
+    }
+  }
+
+
+/*
   img {
     display: block;
     width: 146.3px;
     height: 40.375px;
     margin: 0 auto;
   }
+  */
 }
 
 .page-footer__social {
@@ -43,9 +71,12 @@
     margin-top: -15px;
     margin-bottom: 0;
 
+    text-align: left;
+    /*
     img {
       margin: 0;
     }
+    */
   }
 
   .page-footer__copyright {
@@ -65,6 +96,21 @@
 
     padding-top: 35px;
     padding-bottom: 36px;
+  }
+
+  .page-footer__logo {
+
+    #logo-pink-blue-mobile {
+      display: none;
+    }
+
+    #logo-pink-blue-desktop {
+      display: inline;
+    }
+
+    svg {
+      width: 146.3px;
+    }
   }
 
   .page-footer__social {

@@ -25,10 +25,33 @@
     height: 66px;
   }
 
+  svg {
+    width: 74.426px;
+
+    fill: #ffffff;
+  }
+
+  &:hover {
+    svg {
+      fill: @cl-pink;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  #logo-pink-white-tablet, #logo-pink-white-desktop {
+    display: none;
+  }
+/*
   img {
     width: 75px;
     height: 22px;
   }
+  */
 }
 
 @media (min-width: @tablet-width) {
@@ -45,11 +68,24 @@
       height: 110px;
     }
 
+    svg {
+      width: 146.3px;
+    }
+
+    #logo-pink-white-mobile, #logo-pink-white-desktop {
+      display: none;
+    }
+
+    #logo-pink-white-tablet {
+      display: inline;
+    }
+    /*
     img {
       display: block;
       width: 147px;
       height: auto;
     }
+    */
   }
 }
 
@@ -75,5 +111,14 @@
     [data-menu-state] & {
       height: 110px;
     }
+
+    #logo-pink-white-mobile, #logo-pink-white-tablet {
+      display: none;
+    }
+
+    #logo-pink-white-desktop {
+      display: inline;
+    }
+
   }
 }
