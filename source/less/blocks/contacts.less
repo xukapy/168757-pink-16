@@ -76,13 +76,13 @@
   background-position: top, bottom;
   background-image: url("../img/bg-triangle-white-footer.svg"),
     url("../img/bg-map-mobile@1x.png");
-  background-size: 100% auto;
+  background-size: 100% 33px, cover;
 
   @media (min-resolution: @retina-dpi),
     (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-triangle-white-footer.svg"),
       url("../img/bg-map-mobile@2x.jpg");
-    background-size: 320px auto;
+    background-size: 320px 33px, 320px;
   }
 }
 
@@ -141,7 +141,7 @@
       url("../img/bg-map-tablet@1x.jpg");
 
     background-position: top, bottom -127px right -20px;
-    background-size: 100%, 700px;
+    background-size: 100% 68px, 700px;
 
     @media (min-resolution: @retina-dpi),
       (min-resolution: @retina-dppx) {
@@ -191,8 +191,7 @@
     height: 503px;
     padding-top: 266px;
 
-    background-size: 100% auto,
-      cover;
+    background-size: 100% 107px, cover;
     background-position: top, bottom -198px center;
 
     background-image: url("../img/bg-triangle-white-footer.svg"),
