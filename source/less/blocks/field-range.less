@@ -1,0 +1,40 @@
+.field-range {
+  height: 14px;
+  padding-top: 6px;
+}
+
+.field-range__track {
+//  position: absolute;
+
+  height: 2px;
+  border: 1px solid #283645;
+}
+
+.field-range__thumb {
+  position: absolute;
+  top: 0;
+
+  width: 14px;
+  height: 14px;
+
+  background-color: #ffffff;
+  border: 2px solid @cl-pink;
+  border-radius: 50%;
+
+  &:active {
+    background-color: @cl-pink;
+  }
+
+  .field-range--crop & {
+    left: 80.5%;
+  }
+
+  .field-range--fill & {
+    left: 12%;
+  }
+
+  .field-range--contrast & {
+    left: 47%;
+  }
+
+}

@@ -12,9 +12,14 @@
   }
 }
 
+.photo_editor__control-btn {
+  display: none;
+}
+
 .photo-editor__tools-list {
   display: flex;
   align-items: center;
+  position: relative;
 
   .list-reset();
 
@@ -24,7 +29,7 @@
 }
 
 .photo-editor__tools-item {
-  position: relative;
+  // position: relative;
 
   display: block;
   width: 50px;
@@ -63,38 +68,40 @@
     fill: #8d949b;
   }
 
-  input {
-    display: none;
-  }
-
-
   svg {
     /* Если не выставить едут иконки
        в планшетной версии
     */
     height: auto;
   }
+}
 
-  input:checked + svg {
-    fill: @cl-pink;
-  }
+#photo-editor-crop:checked ~ .photo-editor__tools-list .photo-editor__tools-item--crop svg,
+#photo-editor-fill:checked ~ .photo-editor__tools-list .photo-editor__tools-item--fill svg,
+#photo-editor-contrast:checked ~ .photo-editor__tools-list .photo-editor__tools-item--contrast svg {
+  fill: @cl-pink;
+}
 
+#photo-editor-crop:checked ~ .photo-editor__tools-list .photo-editor__tools-item--crop .photo-editor__slider,
+#photo-editor-fill:checked ~ .photo-editor__tools-list .photo-editor__tools-item--fill .photo-editor__slider,
+#photo-editor-contrast:checked ~ .photo-editor__tools-list .photo-editor__tools-item--contrast .photo-editor__slider {
+  display: block;
 }
 
 .photo-editor__slider {
   position: absolute;
+  display: none;
+  left: 18px;
+  bottom: 29px;
 
-//  display: none;
-
-/*  .photo-editor__tool>input:checked  + & {
-*    display: block;
-  }
-*/
-
-  &[type=range] {
+  width: 240px;
+  /*
+  &[type="range"] {
     width: 240px;
   }
+  */
 
+  /*
   &--crop {
     left: -16px;
     bottom: -43px;
@@ -109,6 +116,7 @@
     left: -176px;
     bottom: -43px;
   }
+  */
 }
 
 .photo-editor__buttons {
@@ -209,6 +217,8 @@
   }
 
   .photo-editor__tools-item {
+    position: relative;
+
     width: 100%;
     height: auto;
     margin-right: 0;
@@ -249,7 +259,6 @@
 
   .photo-editor__tool {
     display: block;
-    float: left;
 
     svg {
       fill: @cl-pink;
@@ -257,25 +266,18 @@
   }
 
   .photo-editor__slider {
-    position: static;
-    display: block;
-    float: right;
+    left: auto;
+    right: 18px;
+    bottom: 28px;
 
+    display: block;
+
+    width: 202px;
+    /*
     &[type=range] {
         width: 202px;
     }
-
-    &--crop[type=range] {
-      margin-top: 11px;
-    }
-
-    &--fill[type=range] {
-      margin-top: 9px;
-    }
-
-    &--contrast[type=range] {
-      margin-top: 8px;
-    }
+    */
 
   }
 
@@ -301,7 +303,6 @@
 
 @media (min-width: @desktop-width) {
   .photo-editor {
-    //min-height: 526px;
     margin-bottom: 27px;
   }
 
@@ -375,7 +376,10 @@
 }
 
   .photo-editor__slider {
+    right: 30px;
 
+    width: 288px;
+    /*
     &[type=range] {
         width: 288px;
     }
@@ -391,6 +395,7 @@
     &--contrast[type=range] {
       margin-top: 15px;
     }
+    */
   }
 
   .photo-editor__buttons {
