@@ -1,3 +1,28 @@
+.photo {
+  &--panorama {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+
+      display: block;
+      padding: 6px 20px;
+
+      content: "панорама дня";
+
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 24px;
+      text-transform: uppercase;
+
+      color: #ffffff;
+      background-color: @cl-pink;
+    }
+  }
+}
+
 .photo__picture {
   img {
     display: block;
@@ -87,6 +112,10 @@
   .photo {
     display: flex;
     flex-direction: column;
+
+    &--panorama::before {
+      top: 57px;
+    }
   }
 
   .photo__picture {
@@ -150,6 +179,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .photo--panorama::before {
+    top: 54px;
+  }
+
   .photo__picture {
     .photo--panorama & {
       img {
