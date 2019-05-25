@@ -8,22 +8,36 @@
   .wrapper();
 
   padding: 40px 0;
-
-  /* Временно для сетки */
-
-  outline: 3px dashed #cc1455;
 }
 
 .page-footer__logo {
   display: block;
-  margin-bottom: 40px;
-}
+  margin-bottom: 31px;
 
-.page-footer__logo-image {
-  display: block;
-  width: 146.3px;
-  height: 40.375px;
-  margin: 0 auto;
+  text-align: center;
+
+  #logo-pink-blue-desktop {
+    display: none;
+  }
+
+  svg {
+    width: 146.3px;
+
+    fill: #283645;
+  }
+
+  &:hover {
+    svg {
+      fill: @cl-pink;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: #283645;
+      opacity: 0.3;
+    }
+  }
 }
 
 .page-footer__social {
@@ -44,6 +58,10 @@
 
   .page-footer__logo {
     width: 33.333%;
+    margin-top: -8px;
+    margin-bottom: 0;
+
+    text-align: left;
   }
 
   .page-footer__copyright {
@@ -60,7 +78,28 @@
 @media (min-width: @desktop-width) {
   .page-footer__wrapper {
     .wrapper(960px, 10px);
-    /* Временно для сетки */
-    min-height: 225px;
+
+    padding-top: 35px;
+    padding-bottom: 36px;
+  }
+
+  .page-footer__logo {
+    #logo-pink-blue-mobile {
+      display: none;
+    }
+
+    #logo-pink-blue-desktop {
+      display: inline;
+    }
+
+    svg {
+      width: 146.3px;
+    }
+  }
+
+  .page-footer__social {
+    &--photo {
+      padding-left: 8px;
+    }
   }
 }

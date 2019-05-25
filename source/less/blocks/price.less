@@ -150,21 +150,85 @@
 @media (min-width: @tablet-width) {
   .price__wrapper {
     width: 660px;
+    padding-top: 88px;
+    padding-bottom: 68px;
   }
 
   .price__list {
-    width: 620px;
+    width: 100%;
+    margin: 0;
   }
 
   .price__plan {
-    &:first-child {
+    padding-top: 12px;
+    padding-bottom: 8px;
+
+    border-bottom: 2px solid #283645;
+
+    &--hit::before {
+      left: 0;
+      top: 0;
+
       display: block;
+      width: 61px;
+      height: 61px;
+
+      background-image: url("../img/bg-hit-tablet.svg");
+    }
+
+    &--hit::after {
+      left: 7px;
+      top: 4px;
+    }
+
+    &:first-child {
+      display: table-cell;
+
+      border-bottom: 2px solid #e5e5e5;
+      border-left: none;
+      border-right: 2px solid #283645;
+
+      background-color: #f2f2f2;
+    }
+
+    &:last-child {
+      border-right: 2px solid #283645;
     }
   }
 
+  .price__name {
+    font-size: 16px;
+  }
+
+  .price__amount {
+    margin-top: -4px;
+
+    font-size: 18px;
+  }
+
   .price__option {
+    font-size: 0;
+    width: 25%;
+
+    padding-top: 7px;
+    padding-left: 15px;
+    padding-bottom: 8px;
+
     &--nosign {
-      display: block;
+      display: table-cell;
+
+      font-size: 14px;
+      text-transform: none;
+    }
+
+    &--yes::before {
+      top: calc(50% - 12px);
+      left: calc(50% - 16px);
+    }
+
+    &--no::before {
+      top: 9px;
+      left: calc(50% - 13px);
     }
   }
 
@@ -176,10 +240,60 @@
 @media (min-width: @desktop-width) {
   .price__wrapper {
     .wrapper(960px, 10px);
+
+    padding-top: 152px;
+    padding-bottom: 95px;
   }
 
   .price__list {
-    width: 940px;
-    min-height: 280px;
+    width: 100%;
+    /*Для сетки*/
+    //min-height: 280px;
+  }
+
+  .price__plan {
+    padding-top: 16px;
+    padding-bottom: 18px;
+
+    &--hit::before {
+      width: 74px;
+      height: 74px;
+
+      background-image: url("../img/bg-hit.svg");
+    }
+
+    &--hit::after {
+      left: 11px;
+      top: 12px;
+    }
+  }
+
+  .price__name {
+    font-size: 18px;
+  }
+
+  .price__amount {
+    margin-top: 0;
+
+    font-size: 24px;
+  }
+
+  .price__option {
+    padding-top: 14px;
+    padding-left: 21px;
+    padding-bottom: 15px;
+
+    &--nosign {
+      font-size: 18px;
+    }
+
+    &--yes::before {
+      top: calc(50% - 9px);
+    }
+
+    &--no::before {
+      top: 16px;
+      left: calc(50% - 14px);
+    }
   }
 }

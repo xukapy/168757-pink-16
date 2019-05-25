@@ -21,6 +21,16 @@
 
   border: 3px solid #ffffff;
   border-radius: 50px;
+
+  &:hover {
+    background-color: #ffffff;
+    color: @cl-pink;
+  }
+
+  &:active {
+    background-color: #ffffff;
+    color: rgba(210, 40, 86, 0.3);
+  }
 }
 
 .app-store__list {
@@ -76,20 +86,15 @@
   }
 
   .app-store__button {
-    //width: 300px;
-    margin-top: 30px;
+    margin-bottom: 44px;
+    padding: 16px 34px;
 
     text-align: center;
   }
 
   .app-store__list {
-    margin-top: 46px;
-  }
-
-  .app-store__item {
-    &:first-child {
-      margin-left: 42px;
-    }
+    padding-left: 41px;
+    margin-bottom: 0;
   }
 
   .app-store__note {
@@ -110,16 +115,18 @@
     height: 55px;
     padding-left: 28px;
     padding-right: 28px;
-    margin-top: 52px;
+    //margin-top: 52px;
+    margin-bottom: 66px;
 
     font-size: 21px;
   }
 
   .app-store__list {
-    margin-top: 65px;
+    //margin-top: 65px;
+    margin-bottom: 57px;
   }
 
   .app-store__note {
-    margin-top: 56px;
+    margin: 0;
   }
 }

@@ -1,8 +1,6 @@
 .slider__item {
-  display: none;
-
-  &--active {
-    display: block;
+  &:not(&--active) {
+    display: none;
   }
 }
 
@@ -46,5 +44,17 @@
     &:active {
       background-color: #ffffff;
     }
+  }
+}
+
+.slider__arrow {
+  fill: rgba(40, 54, 69, 0.3);
+
+  &:hover {
+    fill: rgba(40, 54, 69, 0.6);
+  }
+
+  &:active {
+    fill: rgba(40, 54, 69, 0.1);
   }
 }
