@@ -56,11 +56,6 @@
               </g>
             </g>
           </svg>
-          <!--picture>
-            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
-            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-            <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
-          </picture-->
         </a>
         <nav class="main-nav main-nav--nojs">
           <button class="main-nav__toggle" type="button">
@@ -261,9 +256,9 @@
               </picture>
             </div>
             <div class="photo-editor__controls">
-              <input id="photo-editor-crop" class="photo_editor__control-btn" type="radio" name="tool" value="crop" checked>
-              <input id="photo-editor-fill" class="photo_editor__control-btn" type="radio" name="tool" value="fill">
-              <input id="photo-editor-contrast" class="photo_editor__control-btn" type="radio" name="tool" value="contrast">
+              <input id="photo-editor-crop" class="photo_editor__control-btn photo_editor__control-btn--crop" type="radio" name="tool" value="crop" checked>
+              <input id="photo-editor-fill" class="photo_editor__control-btn photo_editor__control-btn--fill" type="radio" name="tool" value="fill">
+              <input id="photo-editor-contrast" class="photo_editor__control-btn photo_editor__control-btn--contrast" type="radio" name="tool" value="contrast">
               <ul class="photo-editor__tools-list">
                 <li class="photo-editor__tools-item photo-editor__tools-item--crop">
                   <label class="photo-editor__tool" for="photo-editor-crop">
@@ -272,9 +267,6 @@
                       <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
                     </svg>
                   </label>
-                  <!--
-                  <input class="photo-editor__slider" type="range" name="crop-slider" >
-                  -->
                   <div class="photo-editor__slider field-range field-range--crop">
                     <div class="field-range__track"></div>
                     <div class="field-range__thumb"></div>
@@ -288,9 +280,6 @@
                       <rect y="40" width="48" height="3"/>
                     </svg>
                   </label>
-                  <!--
-                  <input class="photo-editor__slider" type="range" name="fill-slider">
-                  -->
                   <div class="photo-editor__slider field-range field-range--fill">
                     <div class="field-range__track"></div>
                     <div class="field-range__thumb"></div>
@@ -303,9 +292,6 @@
                       <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
                     </svg>
                   </label>
-                  <!--
-                  <input class="photo-editor__slider" type="range" name="contrast-slider">
-                  -->
                   <div class="photo-editor__slider field-range field-range--contrast">
                     <div class="field-range__track"></div>
                     <div class="field-range__thumb"></div>
@@ -362,10 +348,6 @@
               </g>
             </g>
           </svg>
-          <!--picture>
-            <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
-            <img src="img/logo-pink-blue-mobile.svg" width="146.3px" height="40.375" alt="PINK">
-          </picture-->
         </a>
         <div class="page-footer__social page-footer__social--photo social">
           <ul class="social__list">
