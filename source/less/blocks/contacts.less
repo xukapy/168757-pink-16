@@ -79,26 +79,26 @@
     url("../img/bg-map-mobile@1x.png");
   background-size: 100% 33px, cover;
 
-  #bg-triangle-white-footer {
-    position: absolute;
-
-    height: 33.27px;
-    width: 100%;
-  }
-
-  #icon-map-marker {
-    position: absolute;
-
-    left: calc(50% - 18px);
-    top: calc(50% - 5px);
-  }
-
   @media (min-resolution: @retina-dpi),
     (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-triangle-white-footer.svg"),
       url("../img/bg-map-mobile@2x.jpg");
     background-size: 320px 33px, 320px;
   }
+}
+
+.contacts__map-triangle {
+  position: absolute;
+
+  height: 33.27px;
+  width: 100%;
+}
+
+.contacts__map-marker {
+  position: absolute;
+
+  left: calc(50% - 18px);
+  top: calc(50% - 5px);
 }
 
 .contacts__map-frame {
@@ -170,14 +170,14 @@
       background-image: url("../img/bg-triangle-white-footer.svg"),
         url("../img/bg-map-tablet@2x.jpg");
     }
+  }
 
-    #bg-triangle-white-footer {
-      height: 68.63px;
-    }
+  .contacts__map-triangle {
+    height: 68.63px;
+  }
 
-    #icon-map-marker {
-      top: calc(50% + 6px);
-    }
+  .contacts__map-marker {
+    top: calc(50% + 6px);
   }
 }
 
@@ -229,16 +229,16 @@
       background-image: url("../img/bg-triangle-white-footer.svg"),
         url("../img/bg-map-desktop@2x.jpg");
     }
+  }
 
-    #bg-triangle-white-footer {
-      // для safari иначе полоска сверху
-      top: -1px;
+  .contacts__map-triangle {
+    // для safari иначе полоска сверху
+    top: -1px;
 
-      height: 107px;
-    }
+    height: 107px;
+  }
 
-    #icon-map-marker {
-      top: calc(50% + 15px);
-    }
+  .contacts__map-marker {
+    top: calc(50% + 15px);
   }
 }
