@@ -39,6 +39,7 @@
   &--crop {
     svg {
       width: 48px;
+      height: 48px;
     }
   }
 
@@ -47,6 +48,7 @@
 
     svg {
       width: 48px;
+      height: 48px;
     }
   }
 
@@ -56,6 +58,7 @@
 
     svg {
       width: 32px;
+      height: 32px;
     }
   }
 }
@@ -67,13 +70,6 @@
 
   &:hover {
     fill: #8d949b;
-  }
-
-  svg {
-    /* Если не выставить едут иконки
-       в планшетной версии
-    */
-    height: auto;
   }
 }
 
@@ -177,6 +173,7 @@
 
   .photo-editor__controls {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 
     width: 300px;
@@ -205,30 +202,36 @@
     border-bottom: 1px solid #dddfe0;
 
     &--crop {
+      height: 56px;
       padding-top: 8px;
       padding-bottom: 16px;
 
       svg {
         width: 24px;
+        height: 24px;
       }
     }
 
     &--fill {
+      height: 73px;
       padding-top: 27px;
       padding-bottom: 14px;
 
       svg {
         width: 24px;
+        height: 24px;
       }
     }
 
     &--contrast {
+      height: 70px;
       padding-top: 25px;
       padding-left: 5px;
       padding-bottom: 20px;
 
       svg {
         width: 16px;
+        height: 16px;
       }
     }
   }
@@ -302,11 +305,13 @@
     padding-right: 30px;
 
     &--crop {
+      height: 71px;
       padding-top: 11px;
       padding-bottom: 4px;
 
       svg {
         width: 48px;
+        height: 48px;
       }
     }
 
@@ -316,6 +321,7 @@
 
       svg {
         width: 48px;
+        height: 48px;
       }
     }
 
@@ -325,7 +331,8 @@
       padding-bottom: 12px;
 
       svg {
-        width: 31.92px;
+        width: 32px;
+        height: 32px;
       }
     }
   }
