@@ -46,10 +46,9 @@
   }
 }
 
-.page-main--nomobile {
+.page-main__nomobile {
   display: none;
 }
-
 
 @media (min-width: @tablet-width) {
   .page-main__welcome {
@@ -89,7 +88,7 @@
     }
   }
 
-  .page-main--nomobile {
+  .page-main__nomobile {
     display: inline;
   }
 }
@@ -112,6 +111,17 @@
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 102px;
+
+    p {
+      padding: 0 60px;
+    }
+
+    &--competition {
+      p {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
   }
 
   .page-main__competition-wrapper {
