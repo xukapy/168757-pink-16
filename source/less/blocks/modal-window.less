@@ -1,0 +1,144 @@
+.modal-window {
+  position: absolute;
+  display: none;
+
+  width: 320px;
+
+  background-color: #ffffff;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+.modal-window__info {
+  .wrapper();
+
+  padding-top: 42px;
+  padding-bottom: 42px;
+
+  font-size: 14px;
+  line-height: 24px;
+
+  color: @bg-menu;
+  text-align: center;
+}
+
+.modal-window__header {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  color: #000000;
+}
+
+.modal-window__text {
+  margin: 0;
+}
+
+.modal-window__controls {
+  .wrapper();
+  padding-bottom: 45px;
+
+  &--close {
+    padding-top: 48px;
+    padding-bottom: 50px;
+
+    background-color: @bg-grey;
+  }
+}
+
+.modal-window__btn {
+  width: 100%;
+
+  padding-top: 16px;
+  padding-bottom: 17px;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: #2aab6d;
+  border: none;
+
+  &:hover {
+    border-color: #1c9b5e;
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    border-color: #1c9b5e;
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .modal-window {
+    width: 461px;
+  }
+
+  .modal-window__info {
+    .wrapper(461px, 0);
+
+    padding: 42px 70px;
+
+    font-size: 18px;
+    color: #283645;
+  }
+
+  .modal-window__header {
+    padding: 0 40px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .modal-window__controls {
+    .wrapper(461px, 71px);
+
+    padding-bottom: 45px;
+
+    &--close {
+      padding-top: 48px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal-window {
+    width: 780px;
+  }
+
+  .modal-window__info {
+    .wrapper(780px, 0);
+
+    padding: 42px 185px;
+
+    font-size: 18px;
+    color: #283645;
+  }
+
+  .modal-window__header {
+    padding: 0;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .modal-window__controls {
+    .wrapper(780px, 239px);
+
+    padding-top: 48px;
+    padding-bottom: 50px;
+
+    background-color: @bg-grey;
+  }
+}
