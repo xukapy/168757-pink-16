@@ -13,12 +13,19 @@
   padding-top: 18px;
   padding-right: 75px;
 
-  svg {
+  &::before {
     position: absolute;
-    top: -72px;
-    left: 0;
-    width: 239px;
-    fill: #dedede;
+    top: -37px;
+    left: 2px;
+    display: block;
+    width: 237px;
+    height: 347px;
+
+    content: "";
+
+    background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-size: 237px;
     z-index: -1;
   }
 }
@@ -92,10 +99,11 @@
     padding-left: 23px;
     padding-top: 12px;
 
-    svg {
+    &::before {
       width: 300px;
-      z-index: 1;
       top: -58px;
+      background-size: 300px;
+      z-index: 1;
     }
   }
 
