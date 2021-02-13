@@ -15,6 +15,7 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var server = require("browser-sync").create();
+var ghPages = require('gulp-gh-pages');
 
 gulp.task("clean", function () {
   return del("build");
@@ -101,3 +102,5 @@ gulp.task("server", function () {
 
 gulp.task("build", gulp.series("clean", "copy", "css", "sprite" ,"html"));
 gulp.task("start", gulp.series("build", "server"));
+
+gulp.task('deploy', () => gulp.src('./build/**/*').pipe(ghPages()));
